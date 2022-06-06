@@ -4,7 +4,7 @@ public interface MyHeap<T extends  Comparable<T>> {
 
     void insert(T value);
 
-    T delete();
+    T delete() throws EmptyHeap;
 
     int size();
 

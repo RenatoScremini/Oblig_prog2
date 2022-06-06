@@ -4,7 +4,7 @@ public class MyHeapTest {
     public static void main(String[] args) {
 
         Integer[] values = new Integer[5];
-        MyHeap<Integer> heapInteger = new MyHeapImpl<>(values, false);
+        MyHeap<Integer> heapInteger = new MyHeapImpl<>(values, true);
 
         heapInteger.insert(23);
         heapInteger.insert(10);
