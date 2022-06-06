@@ -34,12 +34,19 @@ public class MyHeapImpl<T extends Comparable<T>> implements MyHeap<T>  {
     }
 
     @Override
-    public T delete() {
+    public T delete() throws EmptyHeap {
+        if (size == 0){
+            throw new EmptyHeap();
+        }
+        T min = values[1];
+        values[1] = values[size--];
         return null;
     }
 
     @Override
     public int size() {
-        return 0;
+        return size;
     }
+
+    private int size;
 }
