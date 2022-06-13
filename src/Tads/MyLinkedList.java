@@ -106,7 +106,7 @@ public class  MyLinkedList<T> implements Lista <T>{ // public class adt.MyLinked
             temp = temp.getNext();
         }
         temp.setNext(newNodo);
-                }
+    }
 }
 
 

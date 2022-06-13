@@ -1,3 +1,4 @@
+/*
 package Tads;
 
 import ExceptionsTads.ArbolLLeno;
@@ -53,10 +54,10 @@ public class MyBinarySearchTree <K, T> implements MyTree<K,T> {
 
     @Override
     public void delete(K key) throws NumeroInvalido {
-        if(buscarNodoPadre(key) == null){
+        if (buscarNodoPadre(key) == null) {
             throw new NumeroInvalido();
         }
-        if(buscarNodoPadre(key ))// ir viendo todos los casos
+        if (buscarNodoPadre(key))// ir viendo todos los casos
     }
 
     public TreeNode<K, T> buscarNodoPadre(K key) {
@@ -78,3 +79,7 @@ public class MyBinarySearchTree <K, T> implements MyTree<K,T> {
         }
         return null;
     }
+}
+
+
+ */
