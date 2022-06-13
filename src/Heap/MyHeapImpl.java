@@ -23,8 +23,7 @@ public class MyHeapImpl<T extends Comparable<T>> implements MyHeap<T>  {
 
     private void insertElement(int e){
         T temp = values[e];
-        int child;
-
+        /*
         for(; 2 * e <= size; e = child){
             child = 2 * e;
 
@@ -38,6 +37,8 @@ public class MyHeapImpl<T extends Comparable<T>> implements MyHeap<T>  {
                 break;
             }
         } values[e] = temp;
+
+ */
     }
 
     @Override

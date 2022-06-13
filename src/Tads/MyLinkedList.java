@@ -1,3 +1,4 @@
+/*
 package Tads;
 
 public class  MyLinkedList<T> implements Lista <T>{ // public class adt.MyLinkedList <E> implements Lista { para hacer que no sea solo object y lo tenoguqe cambiar  en nodo en lista y en todo
@@ -112,6 +113,6 @@ public class  MyLinkedList<T> implements Lista <T>{ // public class adt.MyLinked
 
 
 
-
+*/
 
 
