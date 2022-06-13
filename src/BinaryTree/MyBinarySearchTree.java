@@ -30,14 +30,14 @@ public class MyBinarySearchTree <K, T> implements MyTree<K,T> {
             } else {
                 ingresarNodo(nodoRaiz.getLeftChild().getKey(), nodoRaiz.getLeftChild().getData());
             }
-        } else if (nodoAgregar.getKey() < nodoRaiz.getKey()) {
+        } else if (nodoAgregar.getKey() >= nodoRaiz.getKey()) {
+            throw new NumeroInvalido();
+        } else {
             if (nodoRaiz.getRightChild() == null) {
                 nodoRaiz.setRightChild(nodoAgregar);
             } else {
                 ingresarNodo(nodoRaiz.getRightChild().getKey(), nodoRaiz.getRightChild().getData());
             }
-        } else {
-            throw new NumeroInvalido();
         }
     }
 
