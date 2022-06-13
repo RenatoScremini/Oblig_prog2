@@ -1,4 +1,4 @@
-package BinaryTree;
+package List;
 
 public class Nodo {
     private Object value;
