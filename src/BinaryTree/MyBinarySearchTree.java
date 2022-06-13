@@ -1,5 +1,5 @@
-/*
-package Tads;
+
+package BinaryTree;
 
 import ExceptionsTads.ArbolLLeno;
 import ExceptionsTads.NodoNoExiste;
@@ -42,7 +42,7 @@ public class MyBinarySearchTree <K, T> implements MyTree<K,T> {
     }
 
     @Override
-    public void insert(K key, T data) throws NodoOcupado, ArbolLLeno, NumeroInvalido {
+    public void insert(K key, T data, K parentKey) throws NodoNoExiste, ArbolLLeno {
         TreeNode<K, T> nodoRaiz = primero;
         TreeNode<K, T> nodoAgregar = new TreeNode<K, T>(key, data);
         if (nodoRaiz == null) {
@@ -51,6 +51,7 @@ public class MyBinarySearchTree <K, T> implements MyTree<K,T> {
             ingresarNodo(key, data);// ya seria suficiente con esto? FIXME
         }
     }
+
 
     @Override
     public void delete(K key) throws NumeroInvalido {
