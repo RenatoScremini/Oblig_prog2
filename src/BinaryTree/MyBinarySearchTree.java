@@ -1,5 +1,5 @@
-/*
-package Tads;
+
+package BinaryTree;
 
 import ExceptionsTads.ArbolLLeno;
 import ExceptionsTads.NodoNoExiste;
