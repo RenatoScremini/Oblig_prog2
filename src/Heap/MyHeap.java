@@ -1,8 +1,8 @@
 package Heap;
 
-public interface MyHeap<T extends  Comparable<T>> {
+public interface MyHeap<K extends Comparable<K>, T > {
 
-    void insert(T value);
+    void insert(K key, T value);
 
     T delete() throws EmptyHeap;
 

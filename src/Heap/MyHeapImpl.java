@@ -1,21 +1,17 @@
+/*
 package Heap;
 
-public class MyHeapImpl<T extends Comparable<T>> implements MyHeap<T>  {
+public class MyHeapImpl<K extends  Comparable<K>,T> implements MyHeap<K,T>  {
 
-    private T[] values;
+
+    private Node[] heap;
     private int size;
 
     private int nextElement = 0;
     private boolean isHeapMin = true;
     private boolean isHeapMax;
 
-    public MyHeapImpl(T[] values, boolean isHeapMax) {
-        this.values = values;
-        this.isHeapMax = isHeapMax;
-        this.size = 0;
 
-
-    }
 
     private int getFatherElement(int childElement){
         return (childElement - 1) / 2;
@@ -38,13 +34,13 @@ public class MyHeapImpl<T extends Comparable<T>> implements MyHeap<T>  {
             }
         } values[e] = temp;
 
- */
+
     }
 
     @Override
-    public void insert(T value) {
-        // Por las dudas no eliminar.
-        /*
+    public void insert(K key,T value) {
+        Por las dudas no eliminar.
+
         values[nextElement] = value;
         int element = nextElement;
         nextElement++;
@@ -57,7 +53,7 @@ public class MyHeapImpl<T extends Comparable<T>> implements MyHeap<T>  {
             element = fatherElement;
             fatherElement = getFatherElement(element);
         }
-        */
+
         if (size == values.length - 1)
             doubleSize();
 
@@ -93,4 +89,6 @@ public class MyHeapImpl<T extends Comparable<T>> implements MyHeap<T>  {
         return size;
     }
 }
+
+*/
 
