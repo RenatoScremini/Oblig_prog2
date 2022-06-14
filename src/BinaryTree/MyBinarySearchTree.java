@@ -3,11 +3,11 @@ package BinaryTree;
 
 import ExceptionsTads.ArbolLLeno;
 import ExceptionsTads.NodoNoExiste;
-import ExceptionsTads.NodoOcupado;
 import ExceptionsTads.NumeroInvalido;
+import com.sun.source.tree.Tree;
 
 
-public class MyBinarySearchTree <K, T> implements MyTree<K,T> {
+public class MyBinarySearchTree <K extends  Comparable<K>, T extends  Comparable<T>>  implements MyTree<K,T> {
     private TreeNode<K, T> primero;
 
     @Override
@@ -41,7 +41,7 @@ public class MyBinarySearchTree <K, T> implements MyTree<K,T> {
         }
     }
 
-    @Override
+   /* @Override
     public void insert(K key, T data, K parentKey) throws NodoNoExiste, ArbolLLeno {
         TreeNode<K, T> nodoRaiz = primero;
         TreeNode<K, T> nodoAgregar = new TreeNode<K, T>(key, data);
@@ -50,8 +50,30 @@ public class MyBinarySearchTree <K, T> implements MyTree<K,T> {
         } else {
             ingresarNodo(key, data);// ya seria suficiente con esto? FIXME
         }
+    }*/
+
+    @Override
+    public void insert(K key, T data)  {
+        TreeNode<K, T> nodoTemp = new TreeNode<>(key, data);
+        primero = insert(key, data, nodoTemp);
     }
 
+    private TreeNode<K, T> insert(K key, T data, TreeNode<K,T> nodoTemp){
+        TreeNode<K, T> nodoAIngresar = new TreeNode<>(key, data);
+        if( primero == null){
+            return nodoAIngresar;
+        }
+        if(data.compareTo(nodoTemp.getData()) > 0){
+            TreeNode<K, T> nodoDer = insert(key, data, nodoTemp.getRightChild());
+            nodoTemp.setRightChild(nodoDer);
+            return nodoTemp;
+        } else if(data.compareTo(nodoTemp.getData()){
+            TreeNode<K, T> nodoIzq = insert(key, data, nodoTemp.getLeftChild());
+            nodoTemp.setLeftChild(nodoIzq);
+            return nodoTemp;
+        }
+        return null;
+    }
 
     @Override
     public void delete(K key) throws NumeroInvalido {
