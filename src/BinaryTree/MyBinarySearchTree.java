@@ -14,8 +14,6 @@ public class MyBinarySearchTree <K extends  Comparable<K>, T extends  Comparable
         if (nodoRaiz.getKey() == null) { // es un arbol vacio
             return null;
         } else if (key.compareTo(nodoRaiz.getKey())== 1) {
-            TreeNode<K, T> nodoTemp;
-            nodoTemp = findNodo(key);
             return nodoRaiz.getLeftChild().find(key);
         }else{
             return nodoRaiz.getRightChild().find(key);

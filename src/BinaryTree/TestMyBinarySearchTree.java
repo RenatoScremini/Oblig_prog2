@@ -13,6 +13,6 @@ public class TestMyBinarySearchTree {
     public void testInsert() throws NodoNoExiste {
         MyBinarySearchTree arbolBinario = new MyBinarySearchTree();
         arbolBinario.insert(0, 0);
-        TestCase.assertEquals(), 0 );
+       // TestCase.assertEquals(), 0 );
     }
 }
