@@ -7,7 +7,7 @@ import junit.framework.TestCase;
 public class TestMyLinkedList {
     @Test
     public void testAdd(){
-        MyLinkedList lista = new MyLinkedList();// cambiar a generics
+        MyLinkedList lista = new MyLinkedList();
         lista.add(1);
         TestCase.assertEquals(1, lista.get(0));
     }
