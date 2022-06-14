@@ -1,0 +1,130 @@
+Index: Oblig_prog2-main/src/Heap/MyHeapImpl.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package Heap;\r\n\r\npublic class MyHeapImpl<K extends  Comparable<K>,T> implements MyHeap<K,T>  {\r\n\r\n\r\n    private Node[] heap;\r\n\r\n    private int size;\r\n\r\n    private Node<K,T> root;\r\n    private Node<K,T> last;\r\n\r\n    private boolean isHeapMin = true;\r\n    private boolean isHeapMax;\r\n\r\n\r\n\r\n    private int getFatherElement(int childElement){\r\n        return (childElement - 1) / 2;\r\n    }\r\n\r\n    @Override\r\n    public void insert(K key,T value) {\r\n        Node<K, T> nodoAgregar = new Node<>(key, value);\r\n\r\n        if (size == heap.length - 1){\r\n            doubleSize();\r\n        }\r\n\r\n        int posicionFinal = size() -1;\r\n\r\n\r\n\r\n    }\r\n\r\n    private void doubleSize(){\r\n        Node[] old = heap;\r\n        heap = (Node[]) new Comparable[heap.length * 2];\r\n        System.arraycopy(old, 1, heap, 1, size);\r\n    }\r\n\r\n    @Override\r\n    public Node<K ,T> delete() throws EmptyHeap {\r\n        if (size == 0){\r\n            throw new EmptyHeap();\r\n        }\r\n        Node elementToDelete = heap[1];\r\n        heap[1] = heap[size--];\r\n        insertElement(1);\r\n        return elementToDelete;\r\n    }\r\n    @Override\r\n    public int size() {\r\n        return size;\r\n    }\r\n\r\n    private void insertElement(int e){\r\n        /*\r\n        T temp = values[e];\r\n\r\n        for(; 2 * e <= size; e = child){\r\n            child = 2 * e;\r\n\r\n            if (child != size && (isHeapMin ? values[child].compareTo(values[child + 1]) > 0 : !(values[child].compareTo(values[child + 1]) > 0))){\r\n                child++;\r\n            }\r\n\r\n            if (isHeapMin ? temp.compareTo(values[child]) > 0 : !(temp.compareTo(values[child]) > 0)){\r\n                values[e] = values[child];\r\n            } else {\r\n                break;\r\n            }\r\n        } values[e] = temp;\r\n\r\n         */\r\n\r\n\r\n    }\r\n\r\n    //Por las dudas no eliminar.\r\n        /*\r\n        values[nextElement] = value;\r\n        int element = nextElement;\r\n        nextElement++;\r\n\r\n        int fatherElement = getFatherElement(element);\r\n        while(value.compareTo(this.values[fatherElement]) > 0 && element != 0){\r\n            values[element] = this.values[fatherElement];\r\n            values[fatherElement] = value;\r\n\r\n            element = fatherElement;\r\n            fatherElement = getFatherElement(element);\r\n        }\r\n\r\n         */\r\n\r\n        /*\r\n        if (size == values.length - 1)\r\n            doubleSize();\r\n\r\n        // Insert a new item to the end of the array\r\n        int pos = ++size;\r\n\r\n        // Percolate up\r\n        for (; pos > 1 && (isHeapMin ? value.compareTo(values[pos / 2]) < 0 : !(value.compareTo(values[pos / 2]) < 0)); pos = pos / 2){\r\n            values[pos] = values[pos / 2];\r\n        }\r\n        values[pos] = value;\r\n\r\n         */\r\n}\r\n\r\n\r\n\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Oblig_prog2-main/src/Heap/MyHeapImpl.java b/Oblig_prog2-main/src/Heap/MyHeapImpl.java
+--- a/Oblig_prog2-main/src/Heap/MyHeapImpl.java	(revision 1b67b483cc382688429fa2dd81d7fde50a74615f)
++++ b/Oblig_prog2-main/src/Heap/MyHeapImpl.java	(date 1655232606072)
+@@ -7,6 +7,10 @@
+ 
+     private int size;
+ 
++    public MyHeapImpl() {
++        this.size = 0;
++    }
++
+     private Node<K,T> root;
+     private Node<K,T> last;
+ 
+@@ -27,8 +31,15 @@
+             doubleSize();
+         }
+ 
++        /**
++         * Inserta el Node en la posicion final del Array.
++         */
+         int posicionFinal = size() -1;
++        heap[posicionFinal] = nodoAgregar;
+ 
++        /**
++         * Ordena el Heap de mayor a menos (isHeapMax)
++         */
+ 
+ 
+     }
+Index: Oblig_prog2-main/src/Heap/MyHeapTest.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package Heap;\r\n\r\npublic class MyHeapTest {\r\n    public static void main(String[] args) throws EmptyHeap {\r\n\r\n        Integer[] values = new Integer[10];\r\n        MyHeap<Integer, Integer> heapInteger = new MyHeapImpl<>(values, true);\r\n\r\n        /*\r\n\r\n\r\n        heapInteger.insert(10);\r\n        heapInteger.insert(23);\r\n        heapInteger.insert(50);\r\n        heapInteger.insert(40);\r\n        heapInteger.insert(30);\r\n        heapInteger.insert(5);\r\n\r\n\r\n        heapInteger.delete(5);\r\n        */\r\n\r\n\r\n        for (int i = 0; i < values.length; i++){\r\n            System.out.println(values[i]);\r\n        }\r\n\r\n        System.out.print(heapInteger.size());\r\n\r\n\r\n    }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Oblig_prog2-main/src/Heap/MyHeapTest.java b/Oblig_prog2-main/src/Heap/MyHeapTest.java
+--- a/Oblig_prog2-main/src/Heap/MyHeapTest.java	(revision 1b67b483cc382688429fa2dd81d7fde50a74615f)
++++ b/Oblig_prog2-main/src/Heap/MyHeapTest.java	(date 1655227968786)
+@@ -1,12 +1,12 @@
+ package Heap;
+-
++/*
+ public class MyHeapTest {
+     public static void main(String[] args) throws EmptyHeap {
+ 
+         Integer[] values = new Integer[10];
+         MyHeap<Integer, Integer> heapInteger = new MyHeapImpl<>(values, true);
+ 
+-        /*
++
+ 
+ 
+         heapInteger.insert(10);
+@@ -18,7 +18,7 @@
+ 
+ 
+         heapInteger.delete(5);
+-        */
++
+ 
+ 
+         for (int i = 0; i < values.length; i++){
+@@ -28,5 +28,8 @@
+         System.out.print(heapInteger.size());
+ 
+ 
++
++
+     }
+-}
+\ No newline at end of file
++}
++
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"8b666697-9923-486a-b580-c499e4299562\" name=\"Changes\" comment=\"Terminando Heap\" />\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"2AZEPZ8KkpnPK6piBZNZNizwKI5\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">\r\n    <property name=\"RunOnceActivity.OpenProjectViewOnStart\" value=\"true\" />\r\n    <property name=\"RunOnceActivity.ShowReadmeOnStart\" value=\"true\" />\r\n    <property name=\"SHARE_PROJECT_CONFIGURATION_FILES\" value=\"true\" />\r\n    <property name=\"WebServerToolWindowFactoryState\" value=\"false\" />\r\n    <property name=\"last_opened_file_path\" value=\"$PROJECT_DIR$\" />\r\n    <property name=\"settings.editor.selected.configurable\" value=\"preferences.lookFeel\" />\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"8b666697-9923-486a-b580-c499e4299562\" name=\"Changes\" comment=\"\" />\r\n      <created>1655208683968</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1655208683968</updated>\r\n      <workItem from=\"1655208685705\" duration=\"4960000\" />\r\n      <workItem from=\"1655219714683\" duration=\"10000\" />\r\n      <workItem from=\"1655224311890\" duration=\"2719000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"Terminando Heap\">\r\n      <created>1655227262215</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1655227262215</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"2\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"Terminando Heap\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"Terminando Heap\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 1b67b483cc382688429fa2dd81d7fde50a74615f)
++++ b/.idea/workspace.xml	(date 1655232606096)
+@@ -1,7 +1,11 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+   <component name="ChangeListManager">
+-    <list default="true" id="8b666697-9923-486a-b580-c499e4299562" name="Changes" comment="Terminando Heap" />
++    <list default="true" id="8b666697-9923-486a-b580-c499e4299562" name="Changes" comment="Terminando Heap">
++      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/Oblig_prog2-main/src/Heap/MyHeapImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Oblig_prog2-main/src/Heap/MyHeapImpl.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/Oblig_prog2-main/src/Heap/MyHeapTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Oblig_prog2-main/src/Heap/MyHeapTest.java" afterDir="false" />
++    </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+@@ -36,7 +40,7 @@
+       <updated>1655208683968</updated>
+       <workItem from="1655208685705" duration="4960000" />
+       <workItem from="1655219714683" duration="10000" />
+-      <workItem from="1655224311890" duration="2719000" />
++      <workItem from="1655224311890" duration="4777000" />
+     </task>
+     <task id="LOCAL-00001" summary="Terminando Heap">
+       <created>1655227262215</created>
+@@ -45,7 +49,14 @@
+       <option name="project" value="LOCAL" />
+       <updated>1655227262215</updated>
+     </task>
+-    <option name="localTasksCounter" value="2" />
++    <task id="LOCAL-00002" summary="Terminando Heap">
++      <created>1655227323761</created>
++      <option name="number" value="00002" />
++      <option name="presentableId" value="LOCAL-00002" />
++      <option name="project" value="LOCAL" />
++      <updated>1655227323761</updated>
++    </task>
++    <option name="localTasksCounter" value="3" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
