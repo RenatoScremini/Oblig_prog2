@@ -1,6 +1,4 @@
-package BinaryTree;
-
-import com.sun.source.tree.Tree;
+package Tads;
 
 public class TreeNode<K, T> {
 

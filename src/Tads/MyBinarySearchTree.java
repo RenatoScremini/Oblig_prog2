@@ -1,8 +1,7 @@
 
-package BinaryTree;
+package Tads;
 
 import ExceptionsTads.NodoNoExiste;
-import com.sun.source.tree.Tree;
 
 
 public class MyBinarySearchTree <K extends  Comparable<K>, T extends  Comparable<T>>  implements MyTree<K,T> {
