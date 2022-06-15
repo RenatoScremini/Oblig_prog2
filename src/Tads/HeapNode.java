@@ -1,11 +1,11 @@
-package Heap;
+package Tads;
 
-public class Node<K,T> {
+public class HeapNode<K,T> {
 
     K key;
     T value;
 
-    public Node(K key, T value) {
+    public HeapNode(K key, T value) {
         this.key = key;
         this.value = value;
     }

@@ -100,22 +100,17 @@ public class MyStackImpl<T> implements MyStack<T> {
     @Override
     public boolean isEmpty() {
         boolean emptyStack = false;
-        if(this.last == null ) {
+        if(first == null ) {
             emptyStack = true;
-
-        } else if (this.last != null){
-            emptyStack = false;
         }
-
         return emptyStack;
     }
 
     @Override
     public void makeEmpty() {
         if (this.first != null && this.last != null ){
-            this.first.setElement(null);
-            this.first.setNext(null);
-            this.last.setElement(null);
+            this.first = null;
+            this.last = null;
         }
 
     }

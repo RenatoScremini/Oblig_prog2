@@ -1,4 +1,6 @@
 package Tests.adt;
+/*
+
 
 import List.MyLinkedList;
 import org.junit.Test;
@@ -51,4 +53,5 @@ public class TestMyLinkedList {
         TestCase.assertEquals(true, lista.buscar(2));
     }
 
-}
+ */
+
