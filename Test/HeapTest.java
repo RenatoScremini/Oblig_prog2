@@ -1,3 +1,5 @@
+
+
 import ExceptionsTads.EmptyHeap;
 import Tads.MyHeap;
 import Tads.MyHeapImpl;
@@ -10,17 +12,18 @@ public class HeapTest {
 
     @Test
     public void testInsert() throws EmptyHeap{
-        MyHeap<Integer, Integer> heapTest = new MyHeapImpl<>(isHeapMax);
+        MyHeap<Integer, Integer> heapTest = new MyHeapImpl<>(true);
 
-        heapTest.insert(10,10);
         heapTest.insert(1,1);
-        heapTest.insert(20,20);
         heapTest.insert(2,2);
+        heapTest.insert(3,3);
+        heapTest.insert(4,4);
         heapTest.insert(5,5);
-        heapTest.insert(7,7);
-        heapTest.insert(30,30);
-        Assertions.assertEquals(7, heapTest.size());
+
+        Assertions.assertEquals(5, heapTest.size());
 
 
     }
 }
+
+
