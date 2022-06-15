@@ -1,4 +1,4 @@
-package List;
+package Tads;
 
 public interface Lista<T> {
 
