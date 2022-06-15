@@ -1,11 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8b666697-9923-486a-b580-c499e4299562" name="Changes" comment="Terminando Heap" />
+    <list default="true" id="8b666697-9923-486a-b580-c499e4299562" name="Changes" comment="Terminando Heap">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/Obligatorio_prog2.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/HeapTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/BinaryTree/MyBinarySearchTree.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/BinaryTree/MyTree.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/BinaryTree/TestMyBinarySearchTree.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/BinaryTree/TreeNode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ExceptionsTads/ArbolLLeno.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ExceptionsTads/NodoNoExiste.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ExceptionsTads/NodoOcupado.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ExceptionsTads/NumeroInvalido.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Hash/MyClosedHash.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Hash/MyClosedHashTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Hash/MyHash.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Heap/EmptyHeap.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Heap/MyHeap.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Heap/MyHeapImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Heap/MyHeapTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Heap/Node.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/List/Lista.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/List/MyLinkedList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/List/Nodo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Queue/EmptyQueueException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Queue/MyQueue.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Queue/MyQueueImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Queue/Node.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Stack/MyStack.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Stack/MyStackImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Stack/Node.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Tests/adt/TestMyLinkedList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Oblig_prog2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Oblig_prog2.iml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -19,12 +63,62 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="RunManager" selected="JUnit.HeapTest.testInsert">
+    <configuration name="MyHeapTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Heap.MyHeapTest" />
+      <module name="Oblig_prog2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Heap.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HeapTest.testInsert" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Oblig_prog2" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="HeapTest" />
+      <option name="METHOD_NAME" value="testInsert" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.HeapTest.testInsert" />
+        <item itemvalue="Application.MyHeapTest" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -37,6 +131,8 @@
       <workItem from="1655208685705" duration="4960000" />
       <workItem from="1655219714683" duration="10000" />
       <workItem from="1655224311890" duration="2719000" />
+      <workItem from="1655233860150" duration="481000" />
+      <workItem from="1655234368032" duration="6916000" />
     </task>
     <task id="LOCAL-00001" summary="Terminando Heap">
       <created>1655227262215</created>
