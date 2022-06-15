@@ -10,7 +10,7 @@ public class HeapTest {
 
     @Test
     public void testInsert() throws EmptyHeap{
-        MyHeap<Integer, Integer> heapTest = new MyHeapImpl<>();
+        MyHeap<Integer, Integer> heapTest = new MyHeapImpl<>(isHeapMax);
 
         heapTest.insert(10,10);
         heapTest.insert(1,1);
