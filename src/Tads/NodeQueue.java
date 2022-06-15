@@ -1,23 +1,23 @@
-package Stack;
+package Tads;
 
-public class Node<T> {
+public class NodeQueue<T> {
     T element;
 
-    private Node<T> next;
+    private NodeQueue<T> next;
 
-    public Node(Node<T> next) {
+    public NodeQueue(NodeQueue<T> next) {
         this.next = next;
     }
 
-    public Node<T> getNext() {
+    public NodeQueue<T> getNext() {
         return next;
     }
 
-    public void setNext(Node<T> next) {
+    public void setNext(NodeQueue<T> next) {
         this.next = next;
     }
 
-    public Node(T element) {
+    public NodeQueue(T element) {
         this.element = element;
     }
 

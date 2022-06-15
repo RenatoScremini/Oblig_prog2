@@ -1,6 +1,7 @@
-package Queue;
+package Tads;
 
 
+import ExceptionsTads.EmptyQueueException;
 
 public interface MyQueue<T> {
 

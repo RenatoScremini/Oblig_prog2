@@ -1,16 +1,16 @@
-package Stack;
+package Tads;
 
 import java.util.EmptyStackException;
 
 public class MyStackImpl<T> implements MyStack<T> {
 
-    private Node<T> first;
-    private Node<T> last;
+    private NodeStack<T> first;
+    private NodeStack<T> last;
     private int size = 0;
 
     private void remove(T element){
-        Node<T> beforeSearchElement = null;
-        Node<T> searchElement = this.first;
+        NodeStack<T> beforeSearchElement = null;
+        NodeStack<T> searchElement = this.first;
 
         while(searchElement != null && !searchElement.getElement().equals(element)){
             beforeSearchElement = searchElement;
@@ -20,7 +20,7 @@ public class MyStackImpl<T> implements MyStack<T> {
         if (searchElement != null){
             if (searchElement == this.first && searchElement != this.last){
 
-                Node<T> elementRemove = this.first;
+                NodeStack<T> elementRemove = this.first;
                 this.first = this.first.getNext();
 
                 elementRemove.setNext(null);
@@ -80,7 +80,7 @@ public class MyStackImpl<T> implements MyStack<T> {
     public void push(T element) {
         if (element != null){
 
-            Node<T> elementToAdd = new Node<>(element);
+            NodeStack<T> elementToAdd = new NodeStack<>(element);
 
             if(this.first == null) { // Si la stack esta vacia.
                 this.first = elementToAdd;
@@ -121,7 +121,7 @@ public class MyStackImpl<T> implements MyStack<T> {
     }
 
     public void display ( ){
-        Node temp = this.first;
+        NodeStack temp = this.first;
         while (temp.getNext() != null){
             System.out.print(temp.getElement());
             System.out.print(" ");

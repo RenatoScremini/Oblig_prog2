@@ -1,23 +1,23 @@
-package Queue;
+package Tads;
 
-public class Node<T> {
+public class NodeStack<T> {
     T element;
 
-    private Node<T> next;
+    private NodeStack<T> next;
 
-    public Node(Node<T> next) {
+    public NodeStack(NodeStack<T> next) {
         this.next = next;
     }
 
-    public Node<T> getNext() {
+    public NodeStack<T> getNext() {
         return next;
     }
 
-    public void setNext(Node<T> next) {
+    public void setNext(NodeStack<T> next) {
         this.next = next;
     }
 
-    public Node(T element) {
+    public NodeStack(T element) {
         this.element = element;
     }
 

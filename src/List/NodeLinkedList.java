@@ -1,11 +1,11 @@
 package List;
 
-public class Nodo {
+public class NodeLinkedList {
     private Object value;
-    private Nodo next;
+    private NodeLinkedList next;
 
 
-    public Nodo ( Object value){
+    public NodeLinkedList(Object value){
 
         this.value = value;
         this.next = null;
@@ -20,11 +20,11 @@ public class Nodo {
         this.value = value;
     }
 
-    public Nodo getNext() {
+    public NodeLinkedList getNext() {
         return next;
     }
 
-    public void setNext(Nodo next) {
+    public void setNext(NodeLinkedList next) {
         this.next = next;
     }
 

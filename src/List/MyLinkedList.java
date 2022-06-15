@@ -1,27 +1,27 @@
 package List;
 
 public class  MyLinkedList<T> implements Lista <T>{ // public class adt.MyLinkedList <E> implements Lista { para hacer que no sea solo object y lo tenoguqe cambiar  en nodo en lista y en todo
-    private Nodo primero;
+    private NodeLinkedList primero;
 
 
     @Override
     public void add(T value) {
         if (this.primero == null) {
-            primero = new Nodo(value);
+            primero = new NodeLinkedList(value);
 
         } else {
-            Nodo temp = primero;
+            NodeLinkedList temp = primero;
             while (temp.getNext() != null) {
                 temp = temp.getNext();
             }
-            temp.setNext(new Nodo(value));
+            temp.setNext(new NodeLinkedList(value));
 
         }
     }
 
     @Override
     public void remove(int position) {
-        Nodo temp = primero;
+        NodeLinkedList temp = primero;
 
         if (temp.getValue() == null){
             System.out.println("El espacio de memoria esta vacio");
@@ -40,14 +40,14 @@ public class  MyLinkedList<T> implements Lista <T>{ // public class adt.MyLinked
                 temp = temp.getNext();
                 i++;
             }
-            Nodo newNextNodo = temp.getNext().getNext();
-            temp.setNext(newNextNodo);
+            NodeLinkedList newNextNodeLinkedList = temp.getNext().getNext();
+            temp.setNext(newNextNodeLinkedList);
         }
     }
 
     @Override
     public Object get(int position) {
-        Nodo temp = primero;
+        NodeLinkedList temp = primero;
         if (position == 0) {
             return temp.getValue();
         }
@@ -61,7 +61,7 @@ public class  MyLinkedList<T> implements Lista <T>{ // public class adt.MyLinked
     }
 
     public boolean buscar(T value){
-        Nodo temp = primero;
+        NodeLinkedList temp = primero;
         if(temp == null){
             return false;
         }
@@ -79,7 +79,7 @@ public class  MyLinkedList<T> implements Lista <T>{ // public class adt.MyLinked
     }
 
     public void display ( ){
-        Nodo temp = this.primero;
+        NodeLinkedList temp = this.primero;
         while (temp.getNext() != null){
             System.out.print(temp.getValue());
             System.out.print(" ");
@@ -89,23 +89,23 @@ public class  MyLinkedList<T> implements Lista <T>{ // public class adt.MyLinked
     }
 
     public void addFirst(T value) {
-        Nodo temp = primero;
-        Nodo newNodo = new Nodo(value);
+        NodeLinkedList temp = primero;
+        NodeLinkedList newNodeLinkedList = new NodeLinkedList(value);
 
         if (temp != null) {
-            newNodo.setNext(temp);
+            newNodeLinkedList.setNext(temp);
         }
-        primero = newNodo;
+        primero = newNodeLinkedList;
     }
 
     public void addLast (T value){
-        Nodo temp = primero;
-        Nodo newNodo = new Nodo(value);
+        NodeLinkedList temp = primero;
+        NodeLinkedList newNodeLinkedList = new NodeLinkedList(value);
 
         while(temp.getNext() != null) {
             temp = temp.getNext();
         }
-        temp.setNext(newNodo);
+        temp.setNext(newNodeLinkedList);
     }
 }
 

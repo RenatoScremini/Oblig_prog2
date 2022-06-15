@@ -1,12 +1,14 @@
-package Queue;
+package Tads;
+
+import ExceptionsTads.EmptyQueueException;
 
 public class MyQueueImpl<T> implements MyQueue<T> {
 
-    Node<T> first;
-    Node<T> last;
+    NodeQueue<T> first;
+    NodeQueue<T> last;
 
     private void addToBeginning ( T element){
-        Node<T> elementToAdd = new Node<>(element);
+        NodeQueue<T> elementToAdd = new NodeQueue<>(element);
 
         if (this.first == null){
             this.first = elementToAdd;
@@ -14,7 +16,7 @@ public class MyQueueImpl<T> implements MyQueue<T> {
             return;
         }
         if (this.first != null){
-            Node<T> newBanana = this.first;
+            NodeQueue<T> newBanana = this.first;
             while (newBanana.getNext() != null){
                 newBanana = newBanana.getNext();
             }
@@ -37,16 +39,16 @@ public class MyQueueImpl<T> implements MyQueue<T> {
         }
 
         if (this.first != null){
-            Node<T> resultNode = this.first;
-            if (resultNode.getNext() != null){
+            NodeQueue<T> resultNodeQueue = this.first;
+            if (resultNodeQueue.getNext() != null){
                 this.first = this.first.getNext();
-                return resultNode.getElement();
+                return resultNodeQueue.getElement();
             }
 
             if (this.first == this.last){
                 this.first = null;
                 this.last = null;
-                return  resultNode.getElement();
+                return  resultNodeQueue.getElement();
             }
         }
 
@@ -65,7 +67,7 @@ public class MyQueueImpl<T> implements MyQueue<T> {
     }
 
     public void display ( ){
-        Node temp = this.first;
+        NodeQueue temp = this.first;
         while (temp.getNext() != null){
             System.out.print(temp.getElement());
             System.out.print(" ");

@@ -1,4 +1,4 @@
-package Queue;
+package ExceptionsTads;
 
 public class EmptyQueueException extends Exception{
 }
