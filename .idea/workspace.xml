@@ -2,16 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="01c3f2c9-f899-49b2-9ea7-bb5dd00a0aca" name="Changes" comment="Agreagando lo que faltaba de BST y Excep">
-      <change afterPath="$PROJECT_DIR$/src/Entities/CargaDatos.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Entities/beer_dataset_test.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Entities/main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/HashTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/HashTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/HeapTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/HeapTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/TestStack.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/TestStack.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entities/Beer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entities/Beer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entities/Brewery.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entities/Brewery.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entities/Review.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entities/Review.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entities/Style.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entities/Style.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entities/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entities/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entities/CargaDatos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entities/CargaDatos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entities/beer_dataset_test.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entities/beer_dataset_test.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,7 +124,14 @@
       <option name="project" value="LOCAL" />
       <updated>1655921454391</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Agreagando lo que faltaba de BST y Excep">
+      <created>1655925197963</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1655925197963</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -149,5 +152,16 @@
     <MESSAGE value="Terminando Heap" />
     <MESSAGE value="Agreagando lo que faltaba de BST y Excep" />
     <option name="LAST_COMMIT_MESSAGE" value="Agreagando lo que faltaba de BST y Excep" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Entities/CargaDatos.java</url>
+          <line>17</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
