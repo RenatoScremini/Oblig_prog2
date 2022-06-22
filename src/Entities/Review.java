@@ -1,5 +1,7 @@
 package Entities;
 
+import Tads.MyLinkedList;
+
 import java.util.Date;
 
 public class Review {
@@ -13,12 +15,19 @@ public class Review {
 
     private double flavourScore;
 
+    private User user;
+
+    private Brewery cerveceria;
+
     public Review(long id, Date date, double overallScore, double aromaScore, double flavourScore) {
         this.id = id;
         this.date = date;
         this.overallScore = overallScore;
         this.aromaScore = aromaScore;
         this.flavourScore = flavourScore;
+        this.user = user;
+        this.cerveceria = cerveceria;
+
     }
 
     public long getId() {
@@ -61,9 +70,19 @@ public class Review {
         this.flavourScore = flavourScore;
     }
 
-    //FIXME Tengo que agregar una liosta de beers
-    //agregar setter y getter de todo
+    public User getUser() {
+        return user;
+    }
 
+    public void setUser(User user) {
+        this.user = user;
+    }
 
+    public Brewery getCerveceria() {
+        return cerveceria;
+    }
 
+    public void setCerveceria(Brewery cerveceria) {
+        this.cerveceria = cerveceria;
+    }
 }

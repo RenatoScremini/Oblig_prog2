@@ -1,8 +1,12 @@
 package Entities;
 
+import Tads.MyLinkedList;
+
 public class Style {
 
     private String name;
+
+    private MyLinkedList<Beer> cervezas;
 
     public Style(String name) {
         this.name = name;

@@ -7,10 +7,14 @@ public class Beer {
 
     private double abv;
 
+    private Style estilo;
+
+
     public Beer(long id, String name, double abv) {
         this.id = id;
         this.name = name;
         this.abv = abv;
+        this.estilo = estilo;
     }
 
     public long getId() {
@@ -37,7 +41,16 @@ public class Beer {
         this.abv = abv;
     }
 
-    //FIXME tiene que tener una list con todas las brewery
+    public Style getEstilo() {
+        return estilo;
+    }
+
+    public void setEstilo(Style estilo) {
+        this.estilo = estilo;
+    }
+
+
+
 
 
 

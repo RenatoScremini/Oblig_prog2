@@ -1,10 +1,15 @@
 package Entities;
 
+import Tads.MyLinkedList;
+
 public class Brewery {
 
     long id;
-
     String name;
+
+    private MyLinkedList<Beer> cervezas;
+
+
 
     public Brewery(long id, String name) {
         this.id = id;
@@ -26,4 +31,6 @@ public class Brewery {
     public void setName(String name) {
         this.name = name;
     }
+
+
 }
