@@ -1,43 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8b666697-9923-486a-b580-c499e4299562" name="Changes" comment="Terminando Heap">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/Obligatorio_prog2.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test/HeapTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/BinaryTree/MyBinarySearchTree.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/BinaryTree/MyTree.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/BinaryTree/TestMyBinarySearchTree.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/BinaryTree/TreeNode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ExceptionsTads/ArbolLLeno.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ExceptionsTads/NodoNoExiste.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ExceptionsTads/NodoOcupado.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ExceptionsTads/NumeroInvalido.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Hash/MyClosedHash.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Hash/MyClosedHashTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Hash/MyHash.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Heap/EmptyHeap.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Heap/MyHeap.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Heap/MyHeapImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Heap/MyHeapTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Heap/Node.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/List/Lista.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/List/MyLinkedList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/List/Nodo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Queue/EmptyQueueException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Queue/MyQueue.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Queue/MyQueueImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Queue/Node.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Stack/MyStack.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Stack/MyStackImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Stack/Node.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Tests/adt/TestMyLinkedList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Oblig_prog2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Oblig_prog2.iml" afterDir="false" />
+    <list default="true" id="01c3f2c9-f899-49b2-9ea7-bb5dd00a0aca" name="Changes" comment="Agreagando lo que faltaba de BST y Excep">
+      <change beforePath="$PROJECT_DIR$/Test/HashTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/HashTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/HeapTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/HeapTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/TestStack.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/TestStack.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entidades/Beer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entidades/Brewery.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entities/Brewery.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entidades/Review.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entities/Review.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entidades/Style.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entities/Style.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entidades/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entities/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entities/Beer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entities/Beer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,6 +31,7 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2AZEPZ8KkpnPK6piBZNZNizwKI5" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />

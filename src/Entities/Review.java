@@ -1,4 +1,4 @@
-package Entidades;
+package Entities;
 
 import java.util.Date;
 
@@ -62,6 +62,7 @@ public class Review {
     }
 
     //FIXME Tengo que agregar una liosta de beers
+    //agregar setter y getter de todo
 
 
 

@@ -1,24 +1,23 @@
 package Entities;
 
 public class Beer {
-
-    private Long id;
+    private long id;
 
     private String name;
 
-    private Double abv;
+    private double abv;
 
-    public Beer(Long id, String name, Double abv) {
+    public Beer(long id, String name, double abv) {
         this.id = id;
         this.name = name;
         this.abv = abv;
     }
 
-    public Long getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(long id) {
         this.id = id;
     }
 
@@ -30,11 +29,17 @@ public class Beer {
         this.name = name;
     }
 
-    public Double getAbv() {
+    public double getAbv() {
         return abv;
     }
 
-    public void setAbv(Double abv) {
+    public void setAbv(double abv) {
         this.abv = abv;
     }
+
+    //FIXME tiene que tener una list con todas las brewery
+
+
+
+
 }

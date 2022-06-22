@@ -1,4 +1,4 @@
-package Entidades;
+package Entities;
 
 public class Style {
 
