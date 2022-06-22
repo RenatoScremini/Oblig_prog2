@@ -2,12 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="01c3f2c9-f899-49b2-9ea7-bb5dd00a0aca" name="Changes" comment="Agreagando lo que faltaba de BST y Excep">
-      <change afterPath="$PROJECT_DIR$/src/Entities/main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/HashTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/HashTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/HeapTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/HeapTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/QueueTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/QueueTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/TestStack.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/TestStack.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entities/CargaDatos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entities/CargaDatos.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entities/beer_dataset_test.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entities/beer_dataset_test.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entities/beer_dataset_test.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/beer_dataset_test.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,8 +54,24 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\renas\Escritorio\Proyecto\Obligatorio_prog2\src\Entities" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\renas\Escritorio\Proyecto\Obligatorio_prog2\src" />
+    </key>
   </component>
-  <component name="RunManager" selected="JUnit.HeapTest.testInsert">
+  <component name="RunManager" selected="Application.CargaDatos">
+    <configuration name="CargaDatos" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Entities.CargaDatos" />
+      <module name="Obligatorio_prog2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Entities.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="MyHeapTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Heap.MyHeapTest" />
       <module name="Oblig_prog2" />
@@ -91,6 +108,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.CargaDatos" />
         <item itemvalue="JUnit.HeapTest.testInsert" />
         <item itemvalue="Application.MyHeapTest" />
       </list>
@@ -131,7 +149,14 @@
       <option name="project" value="LOCAL" />
       <updated>1655925197963</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Agreagando lo que faltaba de BST y Excep">
+      <created>1655930012995</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1655930012995</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -152,16 +177,5 @@
     <MESSAGE value="Terminando Heap" />
     <MESSAGE value="Agreagando lo que faltaba de BST y Excep" />
     <option name="LAST_COMMIT_MESSAGE" value="Agreagando lo que faltaba de BST y Excep" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Entities/CargaDatos.java</url>
-          <line>17</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
