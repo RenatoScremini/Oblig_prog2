@@ -13,11 +13,13 @@ import java.io.IOException;
 import java.util.Date;
 
 public class CargaDatos {
-    private MyClosedHash<Long, Beer> listaCervezas = new MyClosedHash();
+   /* private MyClosedHash<Long, Beer> listaCervezas = new MyClosedHash();
     private MyClosedHash<Long, Brewery> listaCervecerias = new MyClosedHash();
     private MyClosedHash<Long, Review> listaReviews = new MyClosedHash();
     private MyClosedHash<Long, Style> listaEstilos = new MyClosedHash();
-    private MyClosedHash<Long, User> listaUser = new MyClosedHash();
+    private MyClosedHash<Long, User> listaUser = new MyClosedHash();*/
+
+    private MyClosedHash<Long, Beer> listaCervezas = new MyClosedHash<>(10000);
 
     public void leerCSV(String path) throws IOException {
         CSVReader csvReader = new CSVReader(new FileReader(path));
