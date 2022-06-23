@@ -20,6 +20,6 @@ public class Style {
         this.name = name;
     }
 
-    //FIXME tengo que agregar una lista de beer
+
 
 }

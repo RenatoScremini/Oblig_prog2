@@ -5,10 +5,8 @@ import Tads.MyLinkedList;
 public class User {
     private String username;
 
-    private MyLinkedList<Review> review;
+    //private MyLinkedList<Review> review;
 
-
-    private MyLinkedList<Review> reviews; // Verificar que es lo más practico una list
 
 
     public User(String username) {

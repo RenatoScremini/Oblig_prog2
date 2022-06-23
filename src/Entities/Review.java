@@ -19,12 +19,15 @@ public class Review {
 
     private Brewery cerveceria;
 
+    private double review_palate;
+
     public Review(long id, Date date, double overallScore, double aromaScore, double flavourScore) {
         this.id = id;
         this.date = date;
         this.overallScore = overallScore;
         this.aromaScore = aromaScore;
         this.flavourScore = flavourScore;
+        this.review_palate = review_palate;
         this.user = user;
         this.cerveceria = cerveceria;
 
@@ -84,5 +87,13 @@ public class Review {
 
     public void setCerveceria(Brewery cerveceria) {
         this.cerveceria = cerveceria;
+    }
+
+    public double getReview_palate() {
+        return review_palate;
+    }
+
+    public void setReview_palate(double review_palate) {
+        this.review_palate = review_palate;
     }
 }

@@ -7,7 +7,7 @@ public class Brewery {
     long id;
     String name;
 
-    private MyLinkedList<Beer> cervezas;
+    //private MyLinkedList<Beer> cervezas;
 
 
 

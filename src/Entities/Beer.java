@@ -7,14 +7,14 @@ public class Beer {
 
     private double abv;
 
-    private Style estilo;
+    // private Style estilo;
 
 
     public Beer(long id, String name, double abv) {
         this.id = id;
         this.name = name;
         this.abv = abv;
-        this.estilo = estilo;
+        //this.estilo = estilo;
     }
 
     public long getId() {
@@ -41,16 +41,13 @@ public class Beer {
         this.abv = abv;
     }
 
-    public Style getEstilo() {
+    /*public Style getEstilo() {
         return estilo;
     }
 
     public void setEstilo(Style estilo) {
         this.estilo = estilo;
-    }
-
-
-
+    }*/
 
 
 

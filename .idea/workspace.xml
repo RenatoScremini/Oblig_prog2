@@ -2,13 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="01c3f2c9-f899-49b2-9ea7-bb5dd00a0aca" name="Changes" comment="Agreagando lo que faltaba de BST y Excep">
+      <change beforePath="$PROJECT_DIR$/.idea/Obligatorio_prog2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Obligatorio_prog2.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/HashTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/HashTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/HeapTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/HeapTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/QueueTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/QueueTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/TestStack.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/TestStack.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entities/Beer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entities/Beer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entities/Brewery.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entities/Brewery.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entities/CargaDatos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entities/CargaDatos.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entities/beer_dataset_test.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/beer_dataset_test.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entities/Review.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entities/Review.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entities/Style.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entities/Style.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entities/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entities/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entities/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entities/main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +31,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/Entities/CargaDatos.java" root0="SKIP_INSPECTION" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -58,7 +68,7 @@
       <recent name="C:\Users\renas\Escritorio\Proyecto\Obligatorio_prog2\src" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.CargaDatos">
+  <component name="RunManager" selected="Application.main">
     <configuration name="CargaDatos" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Entities.CargaDatos" />
       <module name="Obligatorio_prog2" />
@@ -78,6 +88,19 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="Heap.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Entities.main" />
+      <module name="Obligatorio_prog2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Entities.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -108,6 +131,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.main" />
         <item itemvalue="Application.CargaDatos" />
         <item itemvalue="JUnit.HeapTest.testInsert" />
         <item itemvalue="Application.MyHeapTest" />
@@ -156,7 +180,14 @@
       <option name="project" value="LOCAL" />
       <updated>1655930012995</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Arreglando carga de datos">
+      <created>1655930789129</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1655930789129</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -176,6 +207,17 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Terminando Heap" />
     <MESSAGE value="Agreagando lo que faltaba de BST y Excep" />
-    <option name="LAST_COMMIT_MESSAGE" value="Agreagando lo que faltaba de BST y Excep" />
+    <MESSAGE value="Arreglando carga de datos" />
+    <option name="LAST_COMMIT_MESSAGE" value="Arreglando carga de datos" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.NumberFormatException" package="java.lang" />
+          <option name="timeStamp" value="3" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
