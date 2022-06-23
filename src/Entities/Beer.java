@@ -10,12 +10,18 @@ public class Beer {
     // private Style estilo;
 
 
+    public Beer(long id) {
+        this.id = id;
+    }
+
     public Beer(long id, String name, double abv) {
         this.id = id;
         this.name = name;
         this.abv = abv;
         //this.estilo = estilo;
     }
+
+
 
     public long getId() {
         return id;
@@ -41,13 +47,6 @@ public class Beer {
         this.abv = abv;
     }
 
-    /*public Style getEstilo() {
-        return estilo;
-    }
-
-    public void setEstilo(Style estilo) {
-        this.estilo = estilo;
-    }*/
 
 
 

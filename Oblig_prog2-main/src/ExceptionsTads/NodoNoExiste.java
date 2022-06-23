@@ -1,4 +1,4 @@
-package ExceptionsTads;
+package Exceptions;
 
 public class NodoNoExiste extends Exception{
 }

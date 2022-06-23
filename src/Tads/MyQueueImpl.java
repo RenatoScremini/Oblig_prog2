@@ -1,6 +1,6 @@
 package Tads;
 
-import ExceptionsTads.EmptyQueueException;
+import Exceptions.EmptyQueueException;
 
 public class MyQueueImpl<T> implements MyQueue<T> {
 

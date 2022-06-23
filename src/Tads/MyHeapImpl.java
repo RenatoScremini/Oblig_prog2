@@ -1,6 +1,6 @@
 package Tads;
 
-import ExceptionsTads.EmptyHeap;
+import Exceptions.EmptyHeap;
 
 public class MyHeapImpl<K extends Comparable<K>, T> implements MyHeap<K,T> {
 

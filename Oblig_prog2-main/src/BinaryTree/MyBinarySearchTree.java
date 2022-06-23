@@ -1,10 +1,10 @@
 
 package BinaryTree;
 
-import ExceptionsTads.ArbolLLeno;
-import ExceptionsTads.NodoNoExiste;
-import ExceptionsTads.NodoOcupado;
-import ExceptionsTads.NumeroInvalido;
+import Exceptions.ArbolLLeno;
+import Exceptions.NodoNoExiste;
+import Exceptions.NodoOcupado;
+import Exceptions.NumeroInvalido;
 
 
 public class MyBinarySearchTree <K, T> implements MyTree<K,T> {

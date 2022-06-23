@@ -2,13 +2,33 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="01c3f2c9-f899-49b2-9ea7-bb5dd00a0aca" name="Changes" comment="Agreagando lo que faltaba de BST y Excep">
+      <change afterPath="$PROJECT_DIR$/src/Exceptions/YaExiste.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Oblig_prog2-main/src/BinaryTree/MyBinarySearchTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/Oblig_prog2-main/src/BinaryTree/MyBinarySearchTree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Oblig_prog2-main/src/BinaryTree/MyTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/Oblig_prog2-main/src/BinaryTree/MyTree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Oblig_prog2-main/src/ExceptionsTads/ArbolLLeno.java" beforeDir="false" afterPath="$PROJECT_DIR$/Oblig_prog2-main/src/ExceptionsTads/ArbolLLeno.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Oblig_prog2-main/src/ExceptionsTads/NodoNoExiste.java" beforeDir="false" afterPath="$PROJECT_DIR$/Oblig_prog2-main/src/ExceptionsTads/NodoNoExiste.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Oblig_prog2-main/src/ExceptionsTads/NodoOcupado.java" beforeDir="false" afterPath="$PROJECT_DIR$/Oblig_prog2-main/src/ExceptionsTads/NodoOcupado.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Oblig_prog2-main/src/ExceptionsTads/NumeroInvalido.java" beforeDir="false" afterPath="$PROJECT_DIR$/Oblig_prog2-main/src/ExceptionsTads/NumeroInvalido.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/HashTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/HashTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/HeapTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/HeapTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/QueueTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/QueueTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/TestStack.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/TestStack.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entities/Beer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entities/Beer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entities/CargaDatos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entities/CargaDatos.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Tads/MyClosedHash.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tads/MyClosedHash.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entities/Review.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entities/Review.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ExceptionsTads/ArbolLLeno.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exceptions/ArbolLLeno.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ExceptionsTads/EmptyHeap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exceptions/EmptyHeap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ExceptionsTads/EmptyQueueException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exceptions/EmptyQueueException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ExceptionsTads/NodoNoExiste.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exceptions/NodoNoExiste.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ExceptionsTads/NodoOcupado.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exceptions/NodoOcupado.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ExceptionsTads/NumeroInvalido.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exceptions/NumeroInvalido.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tads/MyBinarySearchTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tads/MyBinarySearchTree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tads/MyHeap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tads/MyHeap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tads/MyHeapImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tads/MyHeapImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tads/MyQueue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tads/MyQueue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tads/MyQueueImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tads/MyQueueImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tads/MyTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tads/MyTree.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +66,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Entities" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Obligatorio-No usado" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -134,7 +154,7 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="8b666697-9923-486a-b580-c499e4299562" name="Changes" comment="" />
+      <changelist id="01c3f2c9-f899-49b2-9ea7-bb5dd00a0aca" name="Changes" comment="Agreagando lo que faltaba de BST y Excep" />
       <created>1655208683968</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -144,6 +164,7 @@
       <workItem from="1655224311890" duration="2719000" />
       <workItem from="1655233860150" duration="481000" />
       <workItem from="1655234368032" duration="6916000" />
+      <workItem from="1655995363652" duration="2444000" />
     </task>
     <task id="LOCAL-00001" summary="Terminando Heap">
       <created>1655227262215</created>
@@ -187,7 +208,14 @@
       <option name="project" value="LOCAL" />
       <updated>1655991421003</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Agreagando reSize al tad Hash">
+      <created>1655993526089</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1655993526089</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -209,7 +237,8 @@
     <MESSAGE value="Agreagando lo que faltaba de BST y Excep" />
     <MESSAGE value="Arreglando carga de datos" />
     <MESSAGE value="Corrigiendo clases y carga de datos" />
-    <option name="LAST_COMMIT_MESSAGE" value="Corrigiendo clases y carga de datos" />
+    <MESSAGE value="Agreagando reSize al tad Hash" />
+    <option name="LAST_COMMIT_MESSAGE" value="Agreagando reSize al tad Hash" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -218,6 +247,11 @@
           <properties class="java.lang.NumberFormatException" package="java.lang" />
           <option name="timeStamp" value="3" />
         </breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Entities/main.java</url>
+          <line>7</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>

@@ -1,38 +1,34 @@
 package Entities;
 
+import Exceptions.YaExiste;
 import Tads.MyClosedHash;
-import Tads.MyHash;
 import com.opencsv.CSVReader;
 //import com.opencsv.exceptions.CsvValidationException;
-import org.apache.commons.lang3.ObjectUtils;
 
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.Date;
 
 public class CargaDatos {
-   /* private MyClosedHash<Long, Beer> listaCervezas = new MyClosedHash();
-    private MyClosedHash<Long, Brewery> listaCervecerias = new MyClosedHash();
-    private MyClosedHash<Long, Review> listaReviews = new MyClosedHash();
-    private MyClosedHash<Long, Style> listaEstilos = new MyClosedHash();
-    private MyClosedHash<Long, User> listaUser = new MyClosedHash();*/
 
-    private MyClosedHash<Long, Beer> listaCervezas = new MyClosedHash<>(10000);
 
+    private MyClosedHash<Long, Beer> listaCervezas = new MyClosedHash<>(50000);
+    private MyClosedHash<Long, Brewery> listaCervecerias = new MyClosedHash(50000);
+    private MyClosedHash<Long, Review> listaReviews = new MyClosedHash(50000);
+    private MyClosedHash<Long, Style> listaEstilos = new MyClosedHash(50000);
+    private MyClosedHash<Long, User> listaUser = new MyClosedHash(50000);
     public void leerCSV(String path) throws IOException {
         CSVReader csvReader = new CSVReader(new FileReader(path));
         String[] line;
         int x = 0;
         while((line=csvReader.readNext()) != null){
-            x = agregar(line,x);
-            System.out.println(x);
+            agregar(line);
+            //System.out.println(x);
         }
 
     }
-
-    public int agregar(String[] linea,int x){
+    //public int agregar(String[] linea,int x){
+    public void agregar(String[] linea){
         try{
             long review_id = Long.parseLong(linea[0]);
             long brewery_id = Long.parseLong(linea[1]);
@@ -48,65 +44,68 @@ public class CargaDatos {
             String beer_name = linea[11];
             double beer_abv = Double.parseDouble(linea[12]);
             long beer_id = Long.parseLong(linea[13]);
-            x++;
-            return x;
+            //x++;
+            //return x;
 
-            //lleno todas la beer, breweries
-            // agegar todo al hash
+            if( listaCervezas == null || noExisteCerveza(beer_id) == false ) { // porque la priemra vez que lo leo no da qeu lsite cerveza = null?
+                Beer cerveza = new Beer(beer_id, beer_name, beer_abv);
+               // FIXME Tengo que agreag la birra a la lsita de cervezzas listaCervezas.setMyHash(0, cerveza);
+            } else{
+                throw new YaExiste();
+            }
+            Brewery cerveceria = new Brewery(brewery_id, brewery_name);
+            if(listaCervecerias == null || noExisteCerveceria(brewery_id) ){
+                //Brewery cerveceria = new Brewery(brewery_id, brewery_name);
+                // FIXME  Tengo que tambien a esto agregarle una lista con todas las cervezas qeu tenga la cervezeria
+            } else{
+                throw new YaExiste();
+            }
+            // Que tengo qeu verifacr en estilos, que existe o que onda
+             Style estilo = new Style(beer_style);
+            //listaEstilos.put()
+
+            User usuario = new User(review_profilename);
+            //listaUser.put();
+
+            Review review = new Review(review_id, review_time, review_overall, review_aroma, review_taste, usuario, cerveceria,review_palate);
+
+            //FIXME me falta agregar todo a las hash que no se como hacerlo y agregar las cosas a las tablas, por ejemplo las cervezas a la lista de cervezas de las brewey
+
 
         } catch(Exception e){
-            return x;
+           // return x;
         }
 
     }
-    /*
-    public void CargaDatos() throws IOException { // PREGUNTAR QUE ES ESTO DE IOExcepton
-        BufferedReader br = new BufferedReader(new FileReader("src/beer_dataset_test.csv"));
-        int contador = 0;
-        String currentLine;
-
-        br.readLine();
-
-        MyClosedHash<Long, Beer> listaCervezas = new MyClosedHash();
-        MyClosedHash<Long, Brewery> listaCervecerias = new MyClosedHash();
-        MyClosedHash<Long, Review> listaReviews = new MyClosedHash();
-        MyClosedHash<Long, Style> listaEstilos = new MyClosedHash();
-        MyClosedHash<Long, User> listaUser = new MyClosedHash();
-        int var;
-
-        while ((currentLine = br.readLine()) != null) {
-            System.out.println(contador);
-            String[] linea = currentLine.split(",");
-            if (!"\"Pyramid Breweries".equals(linea[2])) {  var =0;}
-            else {var = 1;}// pierdo esta cerveza
-            System.out.println(linea[0]);
-
-            if (linea[12]!= null){
-
-                //try {
-                long review_id = Long.parseLong(linea[0]);
-                long brewery_id = Long.parseLong(linea[1]);//FIXME que onda este error
-                String brewery_name = linea[2].substring(0, linea[2].length());
-                Date review_time = new Date(Long.parseLong(linea[3 + var]) * 1000);
-                double review_overall = Double.parseDouble(linea[4 + var]);
-                double review_aroma = Double.parseDouble(linea[5 + var]);
-                double review_appearance = Double.parseDouble(linea[6 + var]);
-                String review_profilename = linea[7 + var].substring(0, linea[7 + var].length());
-                String beer_style = linea[8 + var].substring(0, linea[8 + var].length());
-                double review_palate = Double.parseDouble(linea[9 + var]);
-                double review_taste = Double.parseDouble(linea[10 + var]);
-                String beer_name = linea[11 + var].substring(0, linea[11 + var].length());
-                double beer_abv = Double.parseDouble(linea[12 + var]);
-                long beer_id = Long.parseLong(linea[13 + var]);
-                contador++;
-                //Tengo que hacer todas las cosas en orden
-
-
-               /*} catch (Exception e){
-
+    public boolean noExisteCerveza (long beer_id){ // Verificar si esta bien el lsitaCervezas.get o tengo que poner algo más
+        boolean aparece = false;
+        for(int i = 0; i < listaCervezas.getTableSize(); i++ ){
+            if(listaCervezas.get(beer_id) == null){
+                aparece = true;
             }
+        }
+        return aparece;
+    }
+
+    public boolean noExisteCerveceria (long brewery_id){
+        boolean aparece = false;
+        for(int i = 0; i < listaCervecerias.getTableSize(); i++ ){
+            if(listaCervecerias.get(brewery_id) == null){
+                aparece = true;
             }
-        }*/
+        }
+        return aparece;
+    }
+
+    /* FIXME public boolean noExisteEstilo (String estilo){
+        boolean aparece = false;
+        for(int i = 0; i < listaEstilos.getTableSize(); i++ ){
+            if(listaEstilos.get(estilo) == null){
+                aparece = true;
+            }
+        }
+        return aparece;
+    }*/
 
 
         }

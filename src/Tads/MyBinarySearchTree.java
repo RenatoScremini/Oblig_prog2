@@ -1,7 +1,7 @@
 
 package Tads;
 
-import ExceptionsTads.NodoNoExiste;
+import Exceptions.NodoNoExiste;
 
 
 public class MyBinarySearchTree <K extends  Comparable<K>, T extends  Comparable<T>>  implements MyTree<K,T> {

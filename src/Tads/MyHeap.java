@@ -1,6 +1,6 @@
 package Tads;
 
-import ExceptionsTads.EmptyHeap;
+import Exceptions.EmptyHeap;
 
 public interface MyHeap<K extends Comparable<K>, T > {
 

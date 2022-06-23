@@ -1,7 +1,7 @@
 package Tads;
 
-import ExceptionsTads.ArbolLLeno;
-import ExceptionsTads.NodoNoExiste;
+import Exceptions.ArbolLLeno;
+import Exceptions.NodoNoExiste;
 
 public interface MyTree<K, T> {
     T find(K key) throws NodoNoExiste;

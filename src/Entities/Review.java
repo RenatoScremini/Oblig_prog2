@@ -21,16 +21,15 @@ public class Review {
 
     private double review_palate;
 
-    public Review(long id, Date date, double overallScore, double aromaScore, double flavourScore) {
+    public Review(long id, Date date, double overallScore, double aromaScore, double flavourScore, User user, Brewery cerveceria, double review_palate) {
         this.id = id;
         this.date = date;
         this.overallScore = overallScore;
         this.aromaScore = aromaScore;
         this.flavourScore = flavourScore;
-        this.review_palate = review_palate;
         this.user = user;
         this.cerveceria = cerveceria;
-
+        this.review_palate = review_palate;
     }
 
     public long getId() {
