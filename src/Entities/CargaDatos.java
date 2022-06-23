@@ -49,25 +49,30 @@ public class CargaDatos {
 
             if( listaCervezas == null || noExisteCerveza(beer_id) == false ) { // porque la priemra vez que lo leo no da qeu lsite cerveza = null?
                 Beer cerveza = new Beer(beer_id, beer_name, beer_abv);
-               // FIXME Tengo que agreag la birra a la lsita de cervezzas listaCervezas.setMyHash(0, cerveza);
+                listaCervezas.put(beer_id, cerveza);
             } else{
                 throw new YaExiste();
             }
             Brewery cerveceria = new Brewery(brewery_id, brewery_name);
             if(listaCervecerias == null || noExisteCerveceria(brewery_id) ){
-                //Brewery cerveceria = new Brewery(brewery_id, brewery_name);
+                listaCervecerias.put(brewery_id, cerveceria);
                 // FIXME  Tengo que tambien a esto agregarle una lista con todas las cervezas qeu tenga la cervezeria
             } else{
                 throw new YaExiste();
             }
             // Que tengo qeu verifacr en estilos, que existe o que onda
              Style estilo = new Style(beer_style);
+
             //listaEstilos.put()
 
             User usuario = new User(review_profilename);
             //listaUser.put();
-
-            Review review = new Review(review_id, review_time, review_overall, review_aroma, review_taste, usuario, cerveceria,review_palate);
+            if(listaReviews == null || noExisteReview(review_id)){
+                Review review = new Review(review_id, review_time, review_overall, review_aroma, review_taste, usuario, cerveceria,review_palate);
+                listaReviews.put(review_id, review);
+            }else{
+                throw new YaExiste();
+            }
 
             //FIXME me falta agregar todo a las hash que no se como hacerlo y agregar las cosas a las tablas, por ejemplo las cervezas a la lista de cervezas de las brewey
 
@@ -96,7 +101,15 @@ public class CargaDatos {
         }
         return aparece;
     }
-
+    public boolean noExisteReview (long review_id){
+        boolean aparece = false;
+        for(int i = 0; i < listaReviews.getTableSize(); i++ ){
+            if(listaReviews.get(review_id) == null){
+                aparece = true;
+            }
+        }
+        return aparece;
+    }
     /* FIXME public boolean noExisteEstilo (String estilo){
         boolean aparece = false;
         for(int i = 0; i < listaEstilos.getTableSize(); i++ ){
