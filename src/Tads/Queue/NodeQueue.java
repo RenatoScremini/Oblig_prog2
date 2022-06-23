@@ -1,4 +1,4 @@
-package Tads;
+package Tads.Queue;
 
 public class NodeQueue<T> {
     T element;

@@ -1,7 +1,8 @@
-package Tads;
+package Tads.Hash;
 
 
-
+import Tads.MyArrayList.MyArrayList;
+import Tads.MyArrayList.MyArrayListImpl;
 
 public class MyClosedHash<K,T> implements  MyHash<K,T> {
 
@@ -12,8 +13,13 @@ public class MyClosedHash<K,T> implements  MyHash<K,T> {
     private int tableSize;
     private int currentSize;
     private int ocupizeSize;
+    private MyArrayList <K> arrayKeys;
 
-    public MyClosedHash(int tableSize) {
+    public MyClosedHash(int tamañoTabla) {
+        myHash = new NodeHash[tamañoTabla];
+        tableSize = tamañoTabla;
+        this.arrayKeys = new MyArrayListImpl<>(tamañoTabla);
+        vectorInit();
     }
 
 
@@ -22,6 +28,7 @@ public class MyClosedHash<K,T> implements  MyHash<K,T> {
             myHash[i] = null;
         currentSize = 0;
     }
+
     private  void reSize() {
         this.tableSize = tableSize * 2;
         MyClosedHash newHash = new MyClosedHash(tableSize);
@@ -30,10 +37,12 @@ public class MyClosedHash<K,T> implements  MyHash<K,T> {
                 newHash.put(myHash[i].getKey(), myHash[i].getValue());
             }
         }
+        setArrayKeys(newHash.arrayKeys);
         setMyHash(newHash.myHash);
         setOcupizeSize(newHash.ocupizeSize);
     }
 
+    public K buscarKey(int lugarArrayKey){ return arrayKeys.get(lugarArrayKey);}
 
 
     @Override
@@ -48,13 +57,13 @@ public class MyClosedHash<K,T> implements  MyHash<K,T> {
         myHash[hash] = new NodeHash<>(key,value);
         currentSize++;
         ocupizeSize++;
+        arrayKeys.add(key);
 
     }
 
     @Override
     public T get(K key) {
         int hash = key.hashCode() % tableSize;
-
 
         while (myHash[hash] != null ) {
             if (myHash[hash].getKey().equals(key) && !myHash[hash].isDeleted()) {
@@ -72,6 +81,8 @@ public class MyClosedHash<K,T> implements  MyHash<K,T> {
             if (myHash[i] != null && myHash[i].getKey().equals(key)){
                 myHash[i].setDeleted(true);
                 currentSize--;
+                arrayKeys.delete(key);
+
                 return;
             }
 
@@ -86,7 +97,6 @@ public class MyClosedHash<K,T> implements  MyHash<K,T> {
     public boolean isEmpty() {
         return getSize()== 0;
     }
-
 
 
     public NodeHash<K, T>[] getMyHash() {
@@ -120,5 +130,14 @@ public class MyClosedHash<K,T> implements  MyHash<K,T> {
     public void setOcupizeSize(int ocupizeSize) {
         this.ocupizeSize = ocupizeSize;
     }
+
+    public void setArrayKeys(MyArrayList<K> arrayKeys) {
+        this.arrayKeys = arrayKeys;
+    }
+
+    public MyArrayList<K> getArrayKeys() {
+        return arrayKeys;
+    }
+
 
 }

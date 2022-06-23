@@ -2,13 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="01c3f2c9-f899-49b2-9ea7-bb5dd00a0aca" name="Changes" comment="Avanzando en carga de datos">
+      <change afterPath="$PROJECT_DIR$/src/Tads/MyArrayList/MyArrayList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Tads/MyArrayList/MyArrayListImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Obligatorio_prog2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Obligatorio_prog2.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/HashTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/HashTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/HeapTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/HeapTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/QueueTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/QueueTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/TestStack.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/TestStack.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entities/Beer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entities/Beer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entities/CargaDatos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entities/CargaDatos.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entities/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entities/main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tads/HeapNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tads/Heap/HeapNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tads/MyClosedHash.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tads/Hash/MyClosedHash.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tads/MyHash.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tads/Hash/MyHash.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tads/MyHeap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tads/Heap/MyHeap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tads/MyHeapImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tads/Heap/MyHeapImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tads/MyQueue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tads/Queue/MyQueue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tads/MyQueueImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tads/Queue/MyQueueImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tads/NodeHash.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tads/Hash/NodeHash.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tads/NodeQueue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tads/Queue/NodeQueue.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,12 +31,21 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/src/Entities/CargaDatos.java" root0="SKIP_INSPECTION" />
@@ -46,7 +68,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Obligatorio-No usado" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../MyArrayListImpl.java" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -101,6 +123,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="HashTest.putTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Obligatorio_prog2" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="HashTest" />
+      <option name="METHOD_NAME" value="putTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="HeapTest.testInsert" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Oblig_prog2" />
       <option name="PACKAGE_NAME" value="" />
@@ -125,6 +157,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.main" />
+        <item itemvalue="JUnit.HashTest.putTest" />
         <item itemvalue="Application.CargaDatos" />
         <item itemvalue="JUnit.HeapTest.testInsert" />
         <item itemvalue="Application.MyHeapTest" />
@@ -144,7 +177,7 @@
       <workItem from="1655224311890" duration="2719000" />
       <workItem from="1655233860150" duration="481000" />
       <workItem from="1655234368032" duration="6916000" />
-      <workItem from="1655995363652" duration="4700000" />
+      <workItem from="1655995363652" duration="13103000" />
     </task>
     <task id="LOCAL-00001" summary="Terminando Heap">
       <created>1655227262215</created>
@@ -202,7 +235,14 @@
       <option name="project" value="LOCAL" />
       <updated>1655997965254</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Avanzando en carga de datos">
+      <created>1656000604159</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1656000604159</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -235,6 +275,11 @@
           <properties class="java.lang.NumberFormatException" package="java.lang" />
           <option name="timeStamp" value="3" />
         </breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Entities/main.java</url>
+          <line>9</line>
+          <option name="timeStamp" value="37" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>

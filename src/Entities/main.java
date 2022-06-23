@@ -11,9 +11,9 @@ public class main {
 
 
 
-        System.out.println("Seleccione la opción que desee:");
+       /* System.out.println("Seleccione la opción que desee:");
         System.out.println("1. Carga de datos\n" + "2. Ejecutar consultas\n" + "3. salir");
-
+*/
 
     }
 }

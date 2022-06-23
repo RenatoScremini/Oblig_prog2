@@ -1,4 +1,4 @@
-package Tads;
+package Tads.Heap;
 
 public class HeapNode<K,T> {
 

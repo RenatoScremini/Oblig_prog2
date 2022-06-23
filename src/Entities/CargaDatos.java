@@ -1,7 +1,6 @@
 package Entities;
 
-import Exceptions.YaExiste;
-import Tads.MyClosedHash;
+import Tads.Hash.MyClosedHash;
 import com.opencsv.CSVReader;
 //import com.opencsv.exceptions.CsvValidationException;
 
@@ -15,21 +14,23 @@ public class CargaDatos {
     private MyClosedHash<Long, Beer> listaCervezas = new MyClosedHash<>(50000);
     private MyClosedHash<Long, Brewery> listaCervecerias = new MyClosedHash(50000);
     private MyClosedHash<Long, Review> listaReviews = new MyClosedHash(50000);
-    private MyClosedHash<Long, Style> listaEstilos = new MyClosedHash(50000);
-    private MyClosedHash<Long, User> listaUser = new MyClosedHash(50000);
+    private MyClosedHash<String, Style> listaEstilos = new MyClosedHash(50000);
+    private MyClosedHash<String, User> listaUser = new MyClosedHash(50000);
+
     public void leerCSV(String path) throws IOException {
         CSVReader csvReader = new CSVReader(new FileReader(path));
         String[] line;
         int x = 0;
-        while((line=csvReader.readNext()) != null){
-            agregar(line);
-            //System.out.println(x);
+        while ((line = csvReader.readNext()) != null) {
+            x = agregar(line, x);
+            System.out.println(x);
         }
 
     }
-    //public int agregar(String[] linea,int x){
-    public void agregar(String[] linea){
-        try{
+
+    public int agregar(String[] linea, int x) {
+        //public void agregar(String[] linea){
+        try {
             long review_id = Long.parseLong(linea[0]);
             long brewery_id = Long.parseLong(linea[1]);
             String brewery_name = linea[2];
@@ -44,84 +45,86 @@ public class CargaDatos {
             String beer_name = linea[11];
             double beer_abv = Double.parseDouble(linea[12]);
             long beer_id = Long.parseLong(linea[13]);
-            //x++;
-            //return x;
 
-            if( listaCervezas == null || noExisteCerveza(beer_id) == false ) { // porque la priemra vez que lo leo no da qeu lsite cerveza = null?
-                Beer cerveza = new Beer(beer_id, beer_name, beer_abv);
-                listaCervezas.put(beer_id, cerveza);
-            } else{
-                throw new YaExiste();
+
+            if(!existeUsuario(review_profilename)){
+                User usuario = new User(review_profilename);
+                listaUser.put(review_profilename, usuario);
             }
-            Brewery cerveceria = new Brewery(brewery_id, brewery_name);
-            if(listaCervecerias == null || noExisteCerveceria(brewery_id) ){
+
+            if(!existeEstilo(beer_style)){
+                Style estilo = new Style(beer_style);
+                listaEstilos.put(beer_style, estilo);
+            }
+
+            if(!existeCerveceria(brewery_id)){
+                Brewery cerveceria = new Brewery(brewery_id, brewery_name);
                 listaCervecerias.put(brewery_id, cerveceria);
-                // FIXME  Tengo que tambien a esto agregarle una lista con todas las cervezas qeu tenga la cervezeria
-            } else{
-                throw new YaExiste();
             }
-            // Que tengo qeu verifacr en estilos, que existe o que onda
-             Style estilo = new Style(beer_style);
 
-            //listaEstilos.put()
+            if(!existeCerveza(beer_id)){
+                Style estilo1 = buscarEstilo(beer_name);
+                Beer cerveza = new Beer(beer_id, beer_name, beer_abv, estilo1);
+                listaCervezas.put(beer_id, cerveza);
+            }
 
-            User usuario = new User(review_profilename);
-            //listaUser.put();
-            if(listaReviews == null || noExisteReview(review_id)){
-                Review review = new Review(review_id, review_time, review_overall, review_aroma, review_taste, usuario, cerveceria,review_palate);
+            if(!existeReview(review_id)){
+                User usuario1 = buscarUsuario(review_profilename);
+                Brewery cerveceria1 = buscarCerveceria(brewery_id);
+                Review review = new Review(review_id, review_time, review_overall, review_aroma, review_taste, usuario1, cerveceria1, review_palate);
                 listaReviews.put(review_id, review);
-            }else{
-                throw new YaExiste();
+
             }
 
-            //FIXME me falta agregar todo a las hash que no se como hacerlo y agregar las cosas a las tablas, por ejemplo las cervezas a la lista de cervezas de las brewey
+
+            x++;
+            return x;
 
 
-        } catch(Exception e){
-           // return x;
+        } catch (Exception e) {
+            return x;
         }
 
     }
-    public boolean noExisteCerveza (long beer_id){ // Verificar si esta bien el lsitaCervezas.get o tengo que poner algo más
-        boolean aparece = false;
-        for(int i = 0; i < listaCervezas.getTableSize(); i++ ){
-            if(listaCervezas.get(beer_id) == null){
-                aparece = true;
-            }
-        }
-        return aparece;
+
+    public boolean existeUsuario(String username){
+        return listaUser.get(username)!=null;
+    }
+    public User buscarUsuario(String userName){
+        return listaUser.get(userName);
     }
 
-    public boolean noExisteCerveceria (long brewery_id){
-        boolean aparece = false;
-        for(int i = 0; i < listaCervecerias.getTableSize(); i++ ){
-            if(listaCervecerias.get(brewery_id) == null){
-                aparece = true;
-            }
-        }
-        return aparece;
+    public boolean existeCerveza(long cerveza_id){
+        return listaCervezas.get(cerveza_id)!=null;
     }
-    public boolean noExisteReview (long review_id){
-        boolean aparece = false;
-        for(int i = 0; i < listaReviews.getTableSize(); i++ ){
-            if(listaReviews.get(review_id) == null){
-                aparece = true;
-            }
-        }
-        return aparece;
+    public Beer buscarCerveza(long cerveza_id){
+        return listaCervezas.get(cerveza_id);
     }
-    /* FIXME public boolean noExisteEstilo (String estilo){
-        boolean aparece = false;
-        for(int i = 0; i < listaEstilos.getTableSize(); i++ ){
-            if(listaEstilos.get(estilo) == null){
-                aparece = true;
-            }
-        }
-        return aparece;
-    }*/
+
+    public boolean existeCerveceria(long cerverceria_id){
+        return listaCervecerias.get(cerverceria_id)!=null;
+    }
+    public Brewery buscarCerveceria(long cerverceria_id){
+        return listaCervecerias.get(cerverceria_id);
+    }
+
+    public boolean existeEstilo(String nombre_estilo){
+        return listaEstilos.get(nombre_estilo)!=null;
+    }
+    public Style buscarEstilo(String nombre_estilo){
+        return listaEstilos.get(nombre_estilo);
+    }
+
+    public boolean existeReview(long review_id){
+        return listaReviews.get(review_id)!=null;
+    }
+    public Review buscarReview(long review_id){
+        return listaReviews.get(review_id);
+    }
 
 
-        }
+
+}
 
 
 

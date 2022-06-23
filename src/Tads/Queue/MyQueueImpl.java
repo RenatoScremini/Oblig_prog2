@@ -1,4 +1,4 @@
-package Tads;
+package Tads.Queue;
 
 import Exceptions.EmptyQueueException;
 
