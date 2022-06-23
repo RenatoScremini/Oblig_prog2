@@ -1,4 +1,4 @@
-package Tads;
+package Tads.BinaryTree;
 
 public class TreeNode<K, T> {
 

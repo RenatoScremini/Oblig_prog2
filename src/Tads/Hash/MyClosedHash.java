@@ -4,6 +4,8 @@ package Tads.Hash;
 import Tads.MyArrayList.MyArrayList;
 import Tads.MyArrayList.MyArrayListImpl;
 
+import static java.lang.Math.abs;
+
 public class MyClosedHash<K,T> implements  MyHash<K,T> {
 
 
@@ -47,8 +49,8 @@ public class MyClosedHash<K,T> implements  MyHash<K,T> {
 
     @Override
     public void put(K key, T value) {
-        int hash = key.hashCode() % tableSize;
-        if(ocupizeSize / tableSize > 0.7){
+        int hash = abs(key.hashCode()) % tableSize;
+        if((double)ocupizeSize / (double)tableSize > 0.7){
             reSize();
         }
         while (myHash[hash] != null && !myHash[hash].isDeleted()) {
@@ -63,7 +65,7 @@ public class MyClosedHash<K,T> implements  MyHash<K,T> {
 
     @Override
     public T get(K key) {
-        int hash = key.hashCode() % tableSize;
+        int hash = abs(key.hashCode()) % tableSize;
 
         while (myHash[hash] != null ) {
             if (myHash[hash].getKey().equals(key) && !myHash[hash].isDeleted()) {

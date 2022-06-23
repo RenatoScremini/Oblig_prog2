@@ -1,8 +1,5 @@
 import Tads.MyClosedHash;
 import Tads.MyHash;
-import Tads.MyStack;
-import Tads.MyStackImpl;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 

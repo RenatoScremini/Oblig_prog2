@@ -1,4 +1,4 @@
-package Tads;
+package Tads.MyLinkedList;
 
 public interface Lista<T> {
 

@@ -1,4 +1,4 @@
-package Tads;
+package Tads.Stack;
 
 import java.util.EmptyStackException;
 

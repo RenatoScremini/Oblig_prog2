@@ -1,4 +1,4 @@
-package Tads;
+package Tads.BinaryTree;
 
 import Exceptions.ArbolLLeno;
 import Exceptions.NodoNoExiste;

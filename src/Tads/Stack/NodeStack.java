@@ -1,4 +1,4 @@
-package Tads;
+package Tads.Stack;
 
 public class NodeStack<T> {
     T element;
