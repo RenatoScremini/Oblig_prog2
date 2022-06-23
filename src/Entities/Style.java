@@ -1,6 +1,6 @@
 package Entities;
 
-import Tads.MyLinkedList;
+import Tads.MyLinkedList.MyLinkedList;
 
 public class Style {
 

@@ -1,7 +1,5 @@
 package Entities;
 
-import Tads.MyLinkedList;
-
 import java.util.Date;
 
 public class Review {

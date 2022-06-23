@@ -1,19 +1,21 @@
 package Entities;
 
-import Tads.MyLinkedList;
+import Tads.Hash.MyClosedHash;
+import Tads.Hash.MyHash;
 
 public class Brewery {
 
     long id;
     String name;
 
-    //private MyLinkedList<Beer> cervezas;
+    private MyHash<Long ,Beer> listaCervezas;
 
 
 
     public Brewery(long id, String name) {
         this.id = id;
         this.name = name;
+        this.listaCervezas = new MyClosedHash<>(10000);
     }
 
     public long getId() {
@@ -32,5 +34,11 @@ public class Brewery {
         this.name = name;
     }
 
+    public MyHash<Long, Beer> getListaCervezas() {
+        return listaCervezas;
+    }
 
+    public void setListaCervezas(MyHash<Long, Beer> listaCervezas) {
+        this.listaCervezas = listaCervezas;
+    }
 }

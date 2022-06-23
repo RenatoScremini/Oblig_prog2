@@ -1,7 +1,5 @@
 package Entities;
 
-import Tads.MyLinkedList;
-
 public class User {
     private String username;
 

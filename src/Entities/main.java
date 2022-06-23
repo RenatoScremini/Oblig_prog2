@@ -7,7 +7,7 @@ import java.util.Scanner;
 public class main {
     public static void main(String[] args) throws IOException {
         CargaDatos todo = new CargaDatos();
-        todo.leerCSV("src/beer_dataset_test.csv");
+        todo.leerCSV("src/Data/beer_dataset_test.csv");
 
 
 
