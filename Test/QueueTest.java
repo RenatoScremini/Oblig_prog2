@@ -1,10 +1,10 @@
-import ExceptionsTads.EmptyQueueException;
+/* import ExceptionsTads.EmptyQueueException;
 import Tads.MyQueue;
 import Tads.MyQueueImpl;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-
-
+*/
+/*
 public class QueueTest {
 
     @Test
@@ -38,3 +38,4 @@ public class QueueTest {
 
     }
 }
+*/

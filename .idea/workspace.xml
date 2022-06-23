@@ -1,13 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="01c3f2c9-f899-49b2-9ea7-bb5dd00a0aca" name="Changes" comment="Avanzando en carga de datos">
-      <change beforePath="$PROJECT_DIR$/src/Entities/Brewery.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entities/Brewery.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entities/CargaDatos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entities/CargaDatos.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entities/Review.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entities/Review.java" afterDir="false" />
+    <list default="true" id="01c3f2c9-f899-49b2-9ea7-bb5dd00a0aca" name="Changes" comment="Finalizando la carga de datos(creo)">
       <change beforePath="$PROJECT_DIR$/src/Entities/Style.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entities/Style.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entities/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entities/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entities/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entities/main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +46,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Exceptions" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Proyecto - copia/Obligatorio_prog2" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -60,6 +55,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\renas\Escritorio\Proyecto\Obligatorio_prog2\src\Tads" />
       <recent name="C:\Users\renas\Escritorio\Proyecto\Obligatorio_prog2\src\Exceptions" />
       <recent name="C:\Users\renas\Escritorio\Proyecto\Obligatorio_prog2\src\Entities" />
     </key>
@@ -226,7 +222,21 @@
       <option name="project" value="LOCAL" />
       <updated>1656000604159</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Finalizando la carga de datos(creo)">
+      <created>1656023138228</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1656023138228</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Finalizando la carga de datos(creo)">
+      <created>1656023220241</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1656023220241</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -250,7 +260,8 @@
     <MESSAGE value="Corrigiendo clases y carga de datos" />
     <MESSAGE value="Agreagando reSize al tad Hash" />
     <MESSAGE value="Avanzando en carga de datos" />
-    <option name="LAST_COMMIT_MESSAGE" value="Avanzando en carga de datos" />
+    <MESSAGE value="Finalizando la carga de datos(creo)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finalizando la carga de datos(creo)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

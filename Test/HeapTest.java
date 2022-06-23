@@ -1,5 +1,5 @@
 
-
+/*
 import ExceptionsTads.EmptyHeap;
 import Tads.MyHeap;
 import Tads.MyHeapImpl;
@@ -26,4 +26,4 @@ public class HeapTest {
     }
 }
 
-
+*/

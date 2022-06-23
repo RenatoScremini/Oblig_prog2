@@ -1,5 +1,7 @@
 package Entities;
 
+import Tads.MyLinkedList.MyLinkedList;
+
 public class Style {
 
     private String name;
