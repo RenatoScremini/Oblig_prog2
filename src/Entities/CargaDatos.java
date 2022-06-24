@@ -20,8 +20,21 @@ public class CargaDatos {
     private MyClosedHash<String, Style> listaEstilos = new MyClosedHash(200000);
     private MyClosedHash<String, User> listaUser = new MyClosedHash(200000);
 
+    public void tamañolistas(){
+        System.out.println("lista reviews:");
+        System.out.println(listaReviews.getSize());
+        System.out.println("lista user:");
+        System.out.println(listaUser.getSize());
+        System.out.println("lista estilos:");
+        System.out.println(listaEstilos.getSize());
+        System.out.println("lista cervecerias:");
+        System.out.println(listaCervecerias.getSize());
+        System.out.println("lista cerveza:");
+        System.out.println(listaCervezas.getSize());
+    }
+
     public void leerCSV(String path) throws IOException {
-        LocalDateTime now = LocalDateTime.now();
+
         CSVReader csvReader = new CSVReader(new FileReader(path));
         String[] line;
         int contador = 0;
@@ -36,8 +49,7 @@ public class CargaDatos {
         }
         LocalDateTime nowFinal = LocalDateTime.now();
 
-        long seconds = ChronoUnit.SECONDS.between(now, nowFinal);
-        System.out.println(seconds);
+        System.out.println(contador);
         System.out.println("Datos Cargados");
 
 
@@ -73,7 +85,7 @@ public class CargaDatos {
                 listaEstilos.put(beer_style, estilo);
             }
 
-            if (listaCervezas.get(beer_id) != null) {
+            if (listaCervezas.get(beer_id) == null) {
                 Style estilo1 = listaEstilos.get(beer_style);
                 Beer cerveza = new Beer(beer_id, beer_name, beer_abv, estilo1);
                 listaCervezas.put(beer_id, cerveza);
@@ -92,14 +104,20 @@ public class CargaDatos {
                 Review review = new Review(review_id, review_time, review_overall, review_aroma, review_taste, usuario1, cerveceria1, review_palate);
                 listaReviews.put(review_id, review);
             }
-
-
-
-
         }
+    }
 
-
-
+    public long cantidadReseñas(Date fechaI , Date fechaF){
+        int cantidadReseñas = 0;
+        for(int i = 0; i<listaReviews.getSize(); i++){
+            long keyReseña = listaReviews.buscarKey(i);
+            Review reviewBuscada = listaReviews.get(keyReseña);
+            Date fechaReseña = reviewBuscada.getDate();
+            if(fechaI.before(fechaReseña) && fechaReseña.before(fechaF)){
+                cantidadReseñas++;
+            }
+        }
+        return cantidadReseñas;
     }
 }
 

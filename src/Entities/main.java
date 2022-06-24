@@ -24,6 +24,7 @@ public class main {
                             cargaDatosRealizada = true;
                             CargaDatos todo = new CargaDatos();
                             todo.leerCSV("src/beer_dataset_test.csv");
+                            todo.tamañolistas();
 
                         }else{
                             System.out.println("Los datos ya fueron cargados");
@@ -50,7 +51,6 @@ public class main {
                                         consulta2.Consulta2();
                                         break;
                                     case 3:
-
                                         Consultas consulta3 = new Consultas();
                                         consulta3.Consulta3();
                                         break;
