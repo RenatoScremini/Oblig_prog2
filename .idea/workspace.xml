@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="01c3f2c9-f899-49b2-9ea7-bb5dd00a0aca" name="Changes" comment="arreglando gitIgnore">
+    <list default="true" id="01c3f2c9-f899-49b2-9ea7-bb5dd00a0aca" name="Changes" comment="Creando menu">
       <change beforePath="$PROJECT_DIR$/src/Entities/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entities/main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -159,7 +159,7 @@
       <workItem from="1655233860150" duration="481000" />
       <workItem from="1655234368032" duration="6916000" />
       <workItem from="1655995363652" duration="13103000" />
-      <workItem from="1656024358980" duration="2929000" />
+      <workItem from="1656024358980" duration="3478000" />
     </task>
     <task id="LOCAL-00001" summary="Terminando Heap">
       <created>1655227262215</created>
@@ -259,7 +259,14 @@
       <option name="project" value="LOCAL" />
       <updated>1656076812515</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Creando menu">
+      <created>1656077578706</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1656077578706</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -286,7 +293,8 @@
     <MESSAGE value="Finalizando la carga de datos(creo)" />
     <MESSAGE value="Eliminando src repetido" />
     <MESSAGE value="arreglando gitIgnore" />
-    <option name="LAST_COMMIT_MESSAGE" value="arreglando gitIgnore" />
+    <MESSAGE value="Creando menu" />
+    <option name="LAST_COMMIT_MESSAGE" value="Creando menu" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
