@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="01c3f2c9-f899-49b2-9ea7-bb5dd00a0aca" name="Changes" comment="Arreglando consulta 1">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entities/CargaDatos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entities/CargaDatos.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entities/Consultas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entities/Consultas.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entities/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entities/main.java" afterDir="false" />
-    </list>
+    <list default="true" id="01c3f2c9-f899-49b2-9ea7-bb5dd00a0aca" name="Changes" comment="Terminado consulta 3(creo)" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -163,7 +158,7 @@
       <workItem from="1655234368032" duration="6916000" />
       <workItem from="1655995363652" duration="13103000" />
       <workItem from="1656024358980" duration="10271000" />
-      <workItem from="1656084974845" duration="4464000" />
+      <workItem from="1656084974845" duration="4996000" />
     </task>
     <task id="LOCAL-00001" summary="Terminando Heap">
       <created>1655227262215</created>
@@ -312,7 +307,14 @@
       <option name="project" value="LOCAL" />
       <updated>1656085082940</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Terminado consulta 3(creo)">
+      <created>1656089595826</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1656089595826</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -345,7 +347,8 @@
     <MESSAGE value="Error en main" />
     <MESSAGE value="Arregel carga datos y avanzar en consulta" />
     <MESSAGE value="Arreglando consulta 1" />
-    <option name="LAST_COMMIT_MESSAGE" value="Arreglando consulta 1" />
+    <MESSAGE value="Terminado consulta 3(creo)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Terminado consulta 3(creo)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -354,11 +357,6 @@
           <properties class="java.lang.NumberFormatException" package="java.lang" />
           <option name="timeStamp" value="3" />
         </breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Entities/CargaDatos.java</url>
-          <line>112</line>
-          <option name="timeStamp" value="47" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
