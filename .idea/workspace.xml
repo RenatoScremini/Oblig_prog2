@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="01c3f2c9-f899-49b2-9ea7-bb5dd00a0aca" name="Changes" comment="Eliminando src repetido">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Oblig_prog2-main/.gitignore" beforeDir="false" />
+    <list default="true" id="01c3f2c9-f899-49b2-9ea7-bb5dd00a0aca" name="Changes" comment="arreglando gitIgnore">
       <change beforePath="$PROJECT_DIR$/src/Entities/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entities/main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -49,7 +46,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Proyecto - copia/Obligatorio_prog2" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -58,6 +55,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\renas\Escritorio\Proyecto\Obligatorio_prog2\src" />
       <recent name="C:\Users\renas\Escritorio\Proyecto\Obligatorio_prog2\src\Tads" />
       <recent name="C:\Users\renas\Escritorio\Proyecto\Obligatorio_prog2\src\Exceptions" />
       <recent name="C:\Users\renas\Escritorio\Proyecto\Obligatorio_prog2\src\Entities" />
@@ -161,7 +159,7 @@
       <workItem from="1655233860150" duration="481000" />
       <workItem from="1655234368032" duration="6916000" />
       <workItem from="1655995363652" duration="13103000" />
-      <workItem from="1656024358980" duration="2041000" />
+      <workItem from="1656024358980" duration="2929000" />
     </task>
     <task id="LOCAL-00001" summary="Terminando Heap">
       <created>1655227262215</created>
@@ -247,7 +245,21 @@
       <option name="project" value="LOCAL" />
       <updated>1656072595880</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="arreglando gitIgnore">
+      <created>1656076756676</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1656076756676</updated>
+    </task>
+    <task id="LOCAL-00014" summary="arreglando gitIgnore">
+      <created>1656076812515</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1656076812515</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -273,7 +285,8 @@
     <MESSAGE value="Avanzando en carga de datos" />
     <MESSAGE value="Finalizando la carga de datos(creo)" />
     <MESSAGE value="Eliminando src repetido" />
-    <option name="LAST_COMMIT_MESSAGE" value="Eliminando src repetido" />
+    <MESSAGE value="arreglando gitIgnore" />
+    <option name="LAST_COMMIT_MESSAGE" value="arreglando gitIgnore" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
