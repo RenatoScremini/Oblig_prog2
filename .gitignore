@@ -3,3 +3,4 @@
 /.idea
 Prog2_Obligatorio.iml
 beer_dataset_test.csv
+/src/beer_dataset_full.csv
