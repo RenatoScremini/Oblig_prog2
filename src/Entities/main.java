@@ -17,7 +17,7 @@ public class main {
             System.out.println("1. Carga de datos\n" + "2. Ejecutar consultas\n" + "3. salir");
 
             try{
-                int numEsc = Integer.parseInt(escaneado.nextLine());
+
                 switch (numEsc){
                     case 1:
                         if(!cargaDatosRealizada){
@@ -50,6 +50,7 @@ public class main {
                                         consulta2.Consulta2();
                                         break;
                                     case 3:
+
                                         Consultas consulta3 = new Consultas();
                                         consulta3.Consulta3();
                                         break;
