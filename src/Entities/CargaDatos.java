@@ -113,7 +113,7 @@ public class CargaDatos {
             long keyReseña = listaReviews.buscarKey(i);
             Review reviewBuscada = listaReviews.get(keyReseña);
             Date fechaReseña = reviewBuscada.getDate();
-            if(fechaI.before(fechaReseña) && fechaReseña.before(fechaF)){
+            if(fechaReseña.after(fechaI) && fechaReseña.before(fechaF)){
                 cantidadReseñas++;
             }
         }

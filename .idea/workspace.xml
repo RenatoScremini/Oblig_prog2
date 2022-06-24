@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="01c3f2c9-f899-49b2-9ea7-bb5dd00a0aca" name="Changes" comment="Error en main">
+    <list default="true" id="01c3f2c9-f899-49b2-9ea7-bb5dd00a0aca" name="Changes" comment="Arregel carga datos y avanzar en consulta">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entities/CargaDatos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entities/CargaDatos.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entities/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entities/main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -161,7 +160,7 @@
       <workItem from="1655233860150" duration="481000" />
       <workItem from="1655234368032" duration="6916000" />
       <workItem from="1655995363652" duration="13103000" />
-      <workItem from="1656024358980" duration="8618000" />
+      <workItem from="1656024358980" duration="10208000" />
     </task>
     <task id="LOCAL-00001" summary="Terminando Heap">
       <created>1655227262215</created>
@@ -289,7 +288,14 @@
       <option name="project" value="LOCAL" />
       <updated>1656080100592</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Arregel carga datos y avanzar en consulta">
+      <created>1656083351961</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1656083351961</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -320,7 +326,8 @@
     <MESSAGE value="Terminado manu y crando clase Consultas" />
     <MESSAGE value="Empezando Consulta 3" />
     <MESSAGE value="Error en main" />
-    <option name="LAST_COMMIT_MESSAGE" value="Error en main" />
+    <MESSAGE value="Arregel carga datos y avanzar en consulta" />
+    <option name="LAST_COMMIT_MESSAGE" value="Arregel carga datos y avanzar en consulta" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -333,11 +340,6 @@
           <url>file://$PROJECT_DIR$/src/Entities/main.java</url>
           <line>43</line>
           <option name="timeStamp" value="20" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Entities/main.java</url>
-          <line>19</line>
-          <option name="timeStamp" value="22" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
