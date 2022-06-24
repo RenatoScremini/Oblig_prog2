@@ -9,7 +9,7 @@ import java.io.IOException;
 import java.time.LocalDateTime;
 import java.time.temporal.ChronoUnit;
 import java.util.Date;
-import java.util.Timer;
+
 
 public class CargaDatos {
 
@@ -36,20 +36,18 @@ public class CargaDatos {
     public void leerCSV(String path) throws IOException {
 
         CSVReader csvReader = new CSVReader(new FileReader(path));
-        String[] line;
-        int contador = 0;
-        line= csvReader.readNext();
+        String[] linea;
+        //int contador = 0;
+        linea= csvReader.readNext();
         System.out.println("Procesando datos..." );
-        while ((line = csvReader.readNext()) != null) {
+        while ((linea = csvReader.readNext()) != null) {
 
-            agregar(line);
-            contador++;
-           // System.out.println(contador);
+            agregar(linea);
+            //contador++;
 
         }
-        LocalDateTime nowFinal = LocalDateTime.now();
 
-        System.out.println(contador);
+        //System.out.println(contador);
         System.out.println("Datos Cargados");
 
 
@@ -107,17 +105,20 @@ public class CargaDatos {
         }
     }
 
-    public long cantidadReseñas(Date fechaI , Date fechaF){
+    public void cantidadReseñas(Date fechaI , Date fechaF){
         int cantidadReseñas = 0;
         for(int i = 0; i<listaReviews.getSize(); i++){
             long keyReseña = listaReviews.buscarKey(i);
+
             Review reviewBuscada = listaReviews.get(keyReseña);
-            Date fechaReseña = reviewBuscada.getDate();
-            if(fechaReseña.after(fechaI) && fechaReseña.before(fechaF)){
-                cantidadReseñas++;
+            if(reviewBuscada != null){
+                Date fechaReseña = reviewBuscada.getDate();
+                if(fechaReseña.after(fechaI) && fechaReseña.before(fechaF)){
+                    cantidadReseñas++;
+                }
             }
         }
-        return cantidadReseñas;
+        System.out.println(cantidadReseñas);
     }
 }
 

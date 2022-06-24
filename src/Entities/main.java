@@ -1,7 +1,8 @@
 package Entities;
 
 import java.io.IOException;
-import java.io.Reader;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Scanner;
 
 public class main {
@@ -9,20 +10,21 @@ public class main {
 
         boolean encendido = true;
         boolean cargaDatosRealizada = false;
-
+        CargaDatos todo = new CargaDatos();
         while(encendido){
             Scanner escaneado = new Scanner(System.in);
+
 
             System.out.println("Seleccione la opción que quiera:");
             System.out.println("1. Carga de datos\n" + "2. Ejecutar consultas\n" + "3. salir");
 
             try{
                 int numEsc = Integer.parseInt(escaneado.nextLine());
+
                 switch (numEsc){
                     case 1:
                         if(!cargaDatosRealizada){
                             cargaDatosRealizada = true;
-                            CargaDatos todo = new CargaDatos();
                             todo.leerCSV("src/beer_dataset_test.csv");
                             todo.tamañolistas();
 
@@ -51,9 +53,38 @@ public class main {
                                         consulta2.Consulta2();
                                         break;
                                     case 3:
-                                        Consultas consulta3 = new Consultas();
-                                        consulta3.Consulta3();
+                                        //Consultas consulta3 = new Consultas();
+                                        //consulta3.Consulta3();
+
+                                        System.out.println("Entro en consulta 3");
+
+                                        Scanner fecha1 = new Scanner(System.in);
+                                        System.out.println("Ingrese la fecha de inicio con formato dd-MM-yyyy");
+                                        String  escaneoFechaInicio = fecha1.nextLine();
+
+                                        Scanner fecha2 = new Scanner(System.in);
+                                        System.out.println("Ingrese la fecha de final con formato dd-MM-yyyy");
+                                        String  escaneoFechaFinal = fecha2.nextLine();
+
+                                        SimpleDateFormat formatoFecha = new SimpleDateFormat("dd-MM-yyyy");
+
+                                        Date fechaInicio=null;
+                                        Date fechaFinal=null;
+
+                                        try {
+                                            fechaInicio = formatoFecha.parse(escaneoFechaInicio);
+                                            fechaFinal = formatoFecha.parse(escaneoFechaFinal);
+                                            //long cantidadR;
+                                            //cantidadR = todo.cantidadReseñas(fechaInicio, fechaFinal);
+                                            todo.cantidadReseñas(fechaInicio, fechaFinal);
+
+                                            //System.out.println("La cantidad de reviews entre la fecha " + fechaInicio + " y " + fechaFinal + " es de " + cantidadR);
+
+                                        }catch (Exception e){
+                                            System.out.println(e.getMessage());
+                                        }
                                         break;
+
                                     case 4:
                                         Consultas consulta4 = new Consultas();
                                         consulta4.Consulta4();

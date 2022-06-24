@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="01c3f2c9-f899-49b2-9ea7-bb5dd00a0aca" name="Changes" comment="Arreglando consulta 1" />
+    <list default="true" id="01c3f2c9-f899-49b2-9ea7-bb5dd00a0aca" name="Changes" comment="Arreglando consulta 1">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entities/CargaDatos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entities/CargaDatos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entities/Consultas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entities/Consultas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entities/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entities/main.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -158,6 +163,7 @@
       <workItem from="1655234368032" duration="6916000" />
       <workItem from="1655995363652" duration="13103000" />
       <workItem from="1656024358980" duration="10271000" />
+      <workItem from="1656084974845" duration="4464000" />
     </task>
     <task id="LOCAL-00001" summary="Terminando Heap">
       <created>1655227262215</created>
@@ -299,7 +305,14 @@
       <option name="project" value="LOCAL" />
       <updated>1656084883335</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Arreglando consulta 1">
+      <created>1656085082940</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1656085082940</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -342,9 +355,9 @@
           <option name="timeStamp" value="3" />
         </breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Entities/main.java</url>
-          <line>43</line>
-          <option name="timeStamp" value="20" />
+          <url>file://$PROJECT_DIR$/src/Entities/CargaDatos.java</url>
+          <line>112</line>
+          <option name="timeStamp" value="47" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
