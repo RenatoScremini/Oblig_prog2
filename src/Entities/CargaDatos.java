@@ -56,8 +56,8 @@ public class CargaDatos {
         }
         Date minDate =   new Date(minfecha * 1000);
         Date maxDate =   new Date(maxfecha * 1000);
-        System.out.println("Fecha minima"+minDate);
-        System.out.println("Fecha maxima" +maxDate);
+        //System.out.println("Fecha minima"+minDate);
+        //System.out.println("Fecha maxima" +maxDate);
         //System.out.println(contador);
         System.out.println("Datos Cargados");
 
@@ -130,7 +130,7 @@ public class CargaDatos {
                 }
             }
         }
-        System.out.println(cantidadReseñas);
+        System.out.println("Entre la fecha " + fechaI + " y"+ fechaF +" hay"+ cantidadReseñas );
     }
 
     public void top10Cervezas(Date fechaI , Date fechaF){
@@ -185,11 +185,9 @@ public class CargaDatos {
             long keyReseña = listaReviews.buscarKey(i);
             Review reviewBuscada = listaReviews.get(keyReseña);
             if(reviewBuscada != null){
-
                 quicksort2.addToQuicksort(1l,listaUser.get(reviewBuscada.getUser().getUsername()));
                 }
             }
-
         NodeHash<Long, User>[] topCatadores = quicksort2.Top(15);
         for (int i=0;i<topCatadores.length;i++){
             if(topCatadores[i]!=null){
@@ -221,6 +219,8 @@ public class CargaDatos {
 
 
     }
+
+
 }
 
 

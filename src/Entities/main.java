@@ -11,6 +11,7 @@ public class  main {
         boolean encendido = true;
         boolean cargaDatosRealizada = false;
         CargaDatos todo = new CargaDatos();
+
         while(encendido){
             Scanner escaneado = new Scanner(System.in);
 
@@ -20,13 +21,15 @@ public class  main {
 
             try{
                 int numEsc = Integer.parseInt(escaneado.nextLine());
-
+                long inicio = System.currentTimeMillis();
                 switch (numEsc){
                     case 1:
                         if(!cargaDatosRealizada){
                             cargaDatosRealizada = true;
-                            todo.leerCSV("src/beer_dataset_test.csv");
-                            todo.tamañolistas();
+                            todo.leerCSV("src/beer_dataset_full.csv");
+                            //todo.tamañolistas();
+                            long fin = System.currentTimeMillis();
+                            System.out.println(fin - inicio);
 
                         }else{
                             System.out.println("Los datos ya fueron cargados");
@@ -45,8 +48,7 @@ public class  main {
                                 int numConsulta = Integer.parseInt(escaneado.nextLine());
                                 switch (numConsulta) {
                                     case 1:
-                                        //Consultas consulta1 = new Consultas();
-                                        //consulta1.Consulta1();
+
                                         System.out.println("Entro en consulta 1");
 
                                         Scanner anio_s = new Scanner(System.in);
@@ -59,29 +61,30 @@ public class  main {
                                         Date fechaInicio1;
                                         Date fechaFinal1;
                                         try {
+                                            long inicio1 = System.currentTimeMillis();
                                             fechaInicio1 = formatoFecha1.parse(fecha11);
                                             fechaFinal1 = formatoFecha1.parse(fecha21);
                                             todo.top10Cervezas(fechaInicio1,fechaFinal1);
+                                            long fin1 = System.currentTimeMillis();
+                                            System.out.println(fin1-inicio1 + "milisegundos");
 
                                         }
                                         catch (Exception e){
                                             System.out.println("Año invalido");
                                         }
                                         break;
+
                                     case 2:
-                                        //Consultas consulta2 = new Consultas();
-                                        //consulta2.Consulta2();
+                                        long inicio2 = System.currentTimeMillis();
 
+                                        todo.top15Catadores();
 
-                                            todo.top15Catadores();
-
-
+                                        long fin2 = System.currentTimeMillis();
+                                        System.out.println(fin2-inicio2 + "milisegundos");
                                         break;
-                                    case 3:
-                                        //Consultas consulta3 = new Consultas();
-                                        //consulta3.Consulta3();
 
-                                        System.out.println("Entro en consulta 3");
+                                        case 3:
+
 
                                         Scanner fecha1 = new Scanner(System.in);
                                         System.out.println("Ingrese la fecha de inicio con formato dd-MM-yyyy");
@@ -97,28 +100,34 @@ public class  main {
                                         Date fechaFinal=null;
 
                                         try {
+                                            long inicio3 = System.currentTimeMillis();
+
                                             fechaInicio = formatoFecha.parse(escaneoFechaInicio);
                                             fechaFinal = formatoFecha.parse(escaneoFechaFinal);
-                                            //long cantidadR;
-                                            //cantidadR = todo.cantidadReseñas(fechaInicio, fechaFinal);
                                             todo.cantidadReseñas(fechaInicio, fechaFinal);
 
-                                            //System.out.println("La cantidad de reviews entre la fecha " + fechaInicio + " y " + fechaFinal + " es de " + cantidadR);
-
+                                            long fin3 = System.currentTimeMillis();
+                                            System.out.println(fin3-inicio3 + "milisegundos");
                                         }catch (Exception e){
                                             System.out.println(e.getMessage());
                                         }
                                         break;
 
                                     case 4:
-                                        //Consultas consulta4 = new Consultas();
-                                        //consulta4.Consulta4();
+                                        long inicio4 = System.currentTimeMillis();
                                         todo.top7Estilos();
+
+                                        long fin4 = System.currentTimeMillis();
+                                        System.out.println(fin4-inicio4 + "milisegundos");
+
                                         break;
                                     case 5:
-                                        //Consultas consulta5 = new Consultas();
-                                        //consulta5.Consulta5();
+                                        long inicio5 = System.currentTimeMillis();
                                         todo.top5Cervezas();
+
+                                        long fin5 = System.currentTimeMillis();
+                                        System.out.println(fin5-inicio5 + "milisegundos");
+
                                         break;
 
                                     default:
