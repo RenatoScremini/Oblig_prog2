@@ -1,14 +1,17 @@
 package Entities;
 
 import Tads.Hash.MyClosedHash;
+import Tads.Hash.NodeHash;
+import Tads.Hash.QuickSort;
 import com.opencsv.CSVReader;
 //import com.opencsv.exceptions.CsvValidationException;
 
 import java.io.FileReader;
 import java.io.IOException;
-import java.time.LocalDateTime;
-import java.time.temporal.ChronoUnit;
 import java.util.Date;
+
+import static java.lang.Math.max;
+import static java.lang.Math.min;
 
 
 public class CargaDatos {
@@ -40,13 +43,21 @@ public class CargaDatos {
         //int contador = 0;
         linea= csvReader.readNext();
         System.out.println("Procesando datos..." );
-        while ((linea = csvReader.readNext()) != null) {
+        long minfecha = 1000000;
+        long maxfecha = 0;
 
+        while ((linea = csvReader.readNext()) != null) {
+            minfecha = min(minfecha,Long.parseLong(linea[3]));
+
+            maxfecha = max(minfecha,Long.parseLong(linea[3]));
             agregar(linea);
             //contador++;
 
         }
-
+        Date minDate =   new Date(minfecha * 1000);
+        Date maxDate =   new Date(maxfecha * 1000);
+        System.out.println("Fecha minima"+minDate);
+        System.out.println("Fecha maxima" +maxDate);
         //System.out.println(contador);
         System.out.println("Datos Cargados");
 
@@ -99,10 +110,11 @@ public class CargaDatos {
             if (listaReviews.get(review_id) == null) {
                 User usuario1 = listaUser.get(review_profilename);
                 Brewery cerveceria1 = listaCervecerias.get(brewery_id);
-                Review review = new Review(review_id, review_time, review_overall, review_aroma, review_taste, usuario1, cerveceria1, review_palate);
+                Review review = new Review(review_id, review_time, review_overall, review_aroma, review_taste, usuario1, cerveceria1, review_palate,beer_id);
                 listaReviews.put(review_id, review);
             }
         }
+
     }
 
     public void cantidadReseñas(Date fechaI , Date fechaF){
@@ -120,7 +132,98 @@ public class CargaDatos {
         }
         System.out.println(cantidadReseñas);
     }
+
+    public void top10Cervezas(Date fechaI , Date fechaF){
+        QuickSort<Long,Beer> quicksort = new QuickSort();
+        quicksort.initQuicksort(listaReviews.getSize());
+        for(int i = 0; i<listaReviews.getSize(); i++){
+            long keyReseña = listaReviews.buscarKey(i);
+            Review reviewBuscada = listaReviews.get(keyReseña);
+            if(reviewBuscada != null){
+                Date fechaReseña = reviewBuscada.getDate();
+                if(fechaReseña.after(fechaI) && fechaReseña.before(fechaF)){
+                    //System.out.println(i);
+                    quicksort.addToQuicksort(1l,listaCervezas.get(reviewBuscada.beer_id));
+                }
+            }
+        }
+        NodeHash<Long, Beer>[] topCervezas = quicksort.Top(10);
+            for (int i=0;i<topCervezas.length;i++){
+                if(topCervezas[i]!=null){
+                    int rank=1+i;
+                    System.out.println("-"+rank+" "+topCervezas[i].getValue().getName());
+                }
+            }
+    }
+
+    public void top5Cervezas(){
+        QuickSort<Long,Beer> quicksort = new QuickSort();
+        quicksort.initQuicksort(listaReviews.getSize());
+        for(int i = 0; i<listaReviews.getSize(); i++){
+            long keyReseña = listaReviews.buscarKey(i);
+            Review reviewBuscada = listaReviews.get(keyReseña);
+            if(reviewBuscada != null){
+                 //System.out.println(i);
+                quicksort.addToQuicksort(1l,listaCervezas.get(reviewBuscada.beer_id));
+
+            }
+        }
+        NodeHash<Long, Beer>[] topCervezas = quicksort.Top(5);
+        for (int i=0;i<topCervezas.length;i++){
+            if(topCervezas[i]!=null){
+                int rank=1+i;
+                System.out.println("-"+rank+" "+topCervezas[i].getValue().getName());
+            }
+        }
+    }
+
+
+    public void top15Catadores() {
+        QuickSort<Long,User> quicksort2 = new QuickSort();
+        quicksort2.initQuicksort(listaReviews.getSize());
+        for(int i = 0; i<listaReviews.getSize(); i++){
+            long keyReseña = listaReviews.buscarKey(i);
+            Review reviewBuscada = listaReviews.get(keyReseña);
+            if(reviewBuscada != null){
+
+                quicksort2.addToQuicksort(1l,listaUser.get(reviewBuscada.getUser().getUsername()));
+                }
+            }
+
+        NodeHash<Long, User>[] topCatadores = quicksort2.Top(15);
+        for (int i=0;i<topCatadores.length;i++){
+            if(topCatadores[i]!=null){
+                int rank=1+i;
+                System.out.println("-"+rank+" "+topCatadores[i].getValue().getUsername());
+            }
+        }
+    }
+
+    public void top7Estilos() {
+        QuickSort<Long,Style> quicksort4 = new QuickSort();
+        quicksort4.initQuicksort(listaCervezas.getSize());
+        for(int i = 0; i<listaReviews.getSize(); i++){
+            long keyReseña = listaReviews.buscarKey(i);
+            Review resenaBuscada = listaReviews.get(keyReseña);
+            if(resenaBuscada != null){
+
+                quicksort4.addToQuicksort((long)resenaBuscada.getAromaScore()*10,listaCervezas.get(resenaBuscada.beer_id).getEstilo());
+            }
+        }
+
+        NodeHash<Long, Style>[] topEstilos = quicksort4.Top(7);
+        for (int i=0;i<topEstilos.length;i++){
+            if(topEstilos[i]!=null){
+                int rank=1+i;
+                System.out.println("-"+rank+" "+topEstilos[i].getValue().getName());
+            }
+        }
+
+
+    }
 }
+
+
 
 
 

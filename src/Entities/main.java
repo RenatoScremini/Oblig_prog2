@@ -5,7 +5,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Scanner;
 
-public class main {
+public class  main {
     public static void main(String[] args) throws IOException {
 
         boolean encendido = true;
@@ -45,12 +45,37 @@ public class main {
                                 int numConsulta = Integer.parseInt(escaneado.nextLine());
                                 switch (numConsulta) {
                                     case 1:
-                                        Consultas consulta1 = new Consultas();
-                                        consulta1.Consulta1();
+                                        //Consultas consulta1 = new Consultas();
+                                        //consulta1.Consulta1();
+                                        System.out.println("Entro en consulta 1");
+
+                                        Scanner anio_s = new Scanner(System.in);
+                                        System.out.println("Ingrese el año con formato yyyy");
+                                        String  anio = anio_s.nextLine();
+                                        String fecha11 ="01-01-"+anio;
+                                        String fecha21 = "31-12-"+ anio;
+                                        SimpleDateFormat formatoFecha1 = new SimpleDateFormat("dd-MM-yyyy");
+
+                                        Date fechaInicio1;
+                                        Date fechaFinal1;
+                                        try {
+                                            fechaInicio1 = formatoFecha1.parse(fecha11);
+                                            fechaFinal1 = formatoFecha1.parse(fecha21);
+                                            todo.top10Cervezas(fechaInicio1,fechaFinal1);
+
+                                        }
+                                        catch (Exception e){
+                                            System.out.println("Año invalido");
+                                        }
                                         break;
                                     case 2:
-                                        Consultas consulta2 = new Consultas();
-                                        consulta2.Consulta2();
+                                        //Consultas consulta2 = new Consultas();
+                                        //consulta2.Consulta2();
+
+
+                                            todo.top15Catadores();
+
+
                                         break;
                                     case 3:
                                         //Consultas consulta3 = new Consultas();
@@ -86,12 +111,14 @@ public class main {
                                         break;
 
                                     case 4:
-                                        Consultas consulta4 = new Consultas();
-                                        consulta4.Consulta4();
+                                        //Consultas consulta4 = new Consultas();
+                                        //consulta4.Consulta4();
+                                        todo.top7Estilos();
                                         break;
                                     case 5:
-                                        Consultas consulta5 = new Consultas();
-                                        consulta5.Consulta5();
+                                        //Consultas consulta5 = new Consultas();
+                                        //consulta5.Consulta5();
+                                        todo.top5Cervezas();
                                         break;
 
                                     default:

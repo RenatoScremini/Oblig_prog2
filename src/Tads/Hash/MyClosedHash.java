@@ -3,6 +3,7 @@ package Tads.Hash;
 
 import Tads.MyArrayList.MyArrayList;
 import Tads.MyArrayList.MyArrayListImpl;
+import com.sun.source.tree.NewArrayTree;
 
 import static java.lang.Math.abs;
 
@@ -16,6 +17,7 @@ public class MyClosedHash<K,T> implements  MyHash<K,T> {
     private int currentSize;
     private int ocupizeSize;
     private MyArrayList <K> arrayKeys;
+
 
     public MyClosedHash(int tamañoTabla) {
         myHash = new NodeHash[tamañoTabla];

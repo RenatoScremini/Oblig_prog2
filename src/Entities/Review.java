@@ -19,7 +19,9 @@ public class Review {
 
     private double review_palate;
 
-    public Review(long id, Date date, double overallScore, double aromaScore, double flavourScore, User user, Brewery cerveceria, double review_palate) {
+    public long beer_id;
+
+    public Review(long id, Date date, double overallScore, double aromaScore, double flavourScore, User user, Brewery cerveceria, double review_palate,long beer_id) {
         this.id = id;
         this.date = date;
         this.overallScore = overallScore;
@@ -28,6 +30,7 @@ public class Review {
         this.user = user;
         this.cerveceria = cerveceria;
         this.review_palate = review_palate;
+        this.beer_id = beer_id;
     }
 
     public long getId() {
